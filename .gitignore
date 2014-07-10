@@ -8,7 +8,6 @@ doc
 .DS_Store
 default.properties
 local.properties
-project.properties
 tests/*$py.class
 tests/build.xml
 tests/project.properties
