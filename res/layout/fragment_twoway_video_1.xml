@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fab46e"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8.0dip" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_video_back" />
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="与老黄通话中"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_video_setting" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="260.0dip"
+        android:layout_height="70.0dip"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_mainpage_weather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10.0dip"
+        android:text="已通话 03:58" />
+
+    <LinearLayout   android:id="@+id/linearLayout_phone_main" android:layout_width="match_parent"  android:layout_height="200.0dip" >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200.0dip"
+        android:background="@color/orange" />
+    </LinearLayout>
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+         android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2.0dip" >
+
+        <ImageButton
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_video_bt_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_video_photo" />
+
+        <ImageButton
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_video_bt_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_video_mute" />
+
+        <Button
+            android:id="@+id/imgbtn_hang_up_phone"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="2.5"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="结  束"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_video_bt_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_twowayvideo_photo" />
+
+        <ImageButton
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_video_bt_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_twowayvideo_video" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_phone_local"
+        android:layout_width="180.0dip"
+        android:layout_height="100.0dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip" >
+    <View
+        android:layout_width="180.0dip"
+        android:layout_height="100.0dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/orange" />
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="180.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="2.0dip" >
+
+        <ImageButton
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_video_bt_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_video_mute" />
+
+        <Button
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="2"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="结  束"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_video_bt_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_twowayvideo_photo" />
+    </LinearLayout>
+
+</LinearLayout>

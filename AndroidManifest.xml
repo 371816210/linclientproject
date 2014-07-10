@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.inhuasoft.smart.client"
       android:versionCode="2211" android:installLocation="auto"> 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="10"/>
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19"/>
     
     <!-- Permissions for Push Notification -->
     <permission android:name="com.inhuasoft.smart.client.permission.C2D_MESSAGE" android:protectionLevel="signature" /> <!-- Change package ! -->
@@ -102,6 +102,13 @@
 
         </activity>
 
+           <activity android:name=".ScreenHome"
+            android:screenOrientation="portrait" 
+            android:theme="@style/BaseActivityStyle" 
+            android:launchMode="singleTask">
+        
+        </activity>
+         
         <activity android:name=".IncomingCallActivity"
 		    android:theme="@style/NoTitle"
             android:noHistory="true"

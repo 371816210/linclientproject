@@ -87,7 +87,7 @@ public class LinphoneLauncherActivity extends Activity {
 			classToStart = UserLoginActivity.class;
 		}
 		else {
-			classToStart = LinphoneActivity.class;
+			classToStart = ScreenHome.class;
 			//classToStart = MainActivity.class;
 		}
 		

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:inhua="http://schemas.android.com/apk/res/com.inhuasoft.smart.client"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1" />
+    -->
+
+    <FrameLayout
+        android:id="@id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/home_title_bg"
+        android:orientation="horizontal" >
+
+        <!--
+        <LinearLayout
+            android:id="@id/home_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8.0dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@id/home_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/ic_home_selector" />
+
+            <TextView
+                android:id="@id/home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="沃家首页"
+                android:textColor="@color/orange"
+                android:textSize="10.0sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@id/video_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@id/video_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/ic_video_selector" />
+
+            <TextView
+                android:id="@id/video_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="语音视频"
+                android:textColor="@color/black"
+                android:textSize="10.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/switch_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/ic_home_switchicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="开关插座"
+                android:textColor="@color/black"
+                android:textSize="10.0sp" />
+        </LinearLayout>
+	
+        <LinearLayout
+            android:id="@id/control_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/ic_home_controlicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="红外遥控"
+                android:textColor="@color/black"
+                android:textSize="10.0sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/more_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"
+                android:src="@drawable/ic_home_moreicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="更多"
+                android:textColor="@color/black"
+                android:textSize="10.0sp" />
+        </LinearLayout>
+        -->
+        
+        
+        
+        <com.inhuasoft.smart.client.MenubarView
+            android:id="@id/home_layout" 
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            inhua:src="@drawable/ic_home_selector"
+            inhua:text="沃家首页" >
+        </com.inhuasoft.smart.client.MenubarView>
+        
+        <com.inhuasoft.smart.client.MenubarView
+            android:id="@id/video_layout" 
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            inhua:src="@drawable/ic_video_selector"
+            inhua:text="语音视频" >
+        </com.inhuasoft.smart.client.MenubarView>
+        
+        <com.inhuasoft.smart.client.MenubarView
+            android:id="@id/switch_layout" 
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            inhua:src="@drawable/ic_switch_selector"
+            inhua:text="开关插座" >
+        </com.inhuasoft.smart.client.MenubarView>
+        
+        <com.inhuasoft.smart.client.MenubarView
+            android:id="@id/control_layout" 
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            inhua:src="@drawable/ic_control_selector"
+            inhua:text="红外遥控" >
+        </com.inhuasoft.smart.client.MenubarView>
+
+        <com.inhuasoft.smart.client.MenubarView
+            android:id="@id/more_layout" 
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            inhua:src="@drawable/ic_more_selector"
+            inhua:text="更多" >
+            </com.inhuasoft.smart.client.MenubarView>
+
+        
+    </LinearLayout>
+
+</LinearLayout>

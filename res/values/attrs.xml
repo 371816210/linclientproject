@@ -18,4 +18,11 @@
         <attr name="picture" format="reference" />
     </declare-styleable>
     
+    <declare-styleable name="MenubarView">
+        <attr name="background" format="reference"></attr>
+        <attr name="src" format="reference"></attr>
+        <attr name="text" format="string"></attr>
+        <attr name="text_size" format="dimension" />
+    </declare-styleable>
+    
 </resources>

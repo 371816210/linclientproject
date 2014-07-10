@@ -12,8 +12,8 @@
     <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/ic_checkbox_selector</item>
     </style>
- <style name="BaseActivityStyle" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+   <style name="BaseActivityStyle" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowSoftInputMode">stateUnchanged</item>
-  </style>
+    </style>
 
 </resources>

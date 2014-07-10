@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="user_login_butt" type="id"></item>
+    <item name="main_content" type="id"></item>
+    <item name="home_layout" type="id"></item>
+    <item name="home_image" type="id"></item>
+    <item name="home_text" type="id"></item>
+    <item name="video_layout" type="id"></item>
+    <item name="video_image" type="id"></item>
+    <item name="video_text" type="id"></item>
+    <item name="switch_layout" type="id"></item>
+    <item name="control_layout" type="id"></item>
+    <item name="more_layout" type="id"></item>
+    
+    <item name="twoway_video_butt" type="id"></item>
+    
+    <item name="menubar_layout" type="id"></item>
+    <item name="menubar_image" type="id"></item>
+    <item name="menubar_text" type="id"></item>
+
+</resources>

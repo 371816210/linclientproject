@@ -37,4 +37,7 @@
     <color name="color_gray">#736F6E</color>
     <color name="color_dark">#161C27</color>
     <color name="color_light">#4D6288</color>
+  
+    <color name="home_title_bg">#DADADA</color>
+    <color name="orange">#fd832c</color>
 </resources>
