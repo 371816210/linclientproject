@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 		    
-    <com.inhuasoft.smart.server.ui.SlidingDrawer
+    <com.inhuasoft.smart.client.ui.SlidingDrawer
 		android:id="@+id/statusBar"
 		linphone:direction="topToBottom"
 		android:layout_width="match_parent"
@@ -246,7 +246,7 @@
 		
 		</RelativeLayout>
 		
-	</com.inhuasoft.smart.server.ui.SlidingDrawer>
+	</com.inhuasoft.smart.client.ui.SlidingDrawer>
 
     <ImageView
         android:contentDescription="@string/content_description_encryption"

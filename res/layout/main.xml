@@ -80,7 +80,7 @@
 
         <fragment
             android:id="@+id/status"
-            android:name="com.inhuasoft.smart.server.StatusFragment"
+            android:name="com.inhuasoft.smart.client.StatusFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/status" />

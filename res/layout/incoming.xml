@@ -43,7 +43,7 @@
 		    android:orientation="vertical"
 		    android:paddingTop="30dip" >
 			
-		    <com.inhuasoft.smart.server.ui.AvatarWithShadow
+		    <com.inhuasoft.smart.client.ui.AvatarWithShadow
 			    android:id="@+id/incoming_picture"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
 		
 	</LinearLayout>
 
-    <com.inhuasoft.smart.server.ui.LinphoneSliders
+    <com.inhuasoft.smart.client.ui.LinphoneSliders
         android:id="@+id/sliding_widget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

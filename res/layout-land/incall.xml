@@ -25,7 +25,7 @@
 
         <fragment
             android:id="@+id/status"
-            android:name="com.inhuasoft.smart.server.StatusFragment"
+            android:name="com.inhuasoft.smart.client.StatusFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/status" />
@@ -43,7 +43,7 @@
         android:src="@drawable/switch_camera"
         android:visibility="invisible" />
     
-    <com.inhuasoft.smart.server.ui.Numpad
+    <com.inhuasoft.smart.client.ui.Numpad
         android:id="@+id/numpad"
         android:background="@drawable/dialer_alt_background"
         android:layout_width="wrap_content"

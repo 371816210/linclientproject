@@ -5,7 +5,7 @@
   	android:background="@drawable/background"
     android:orientation="vertical">
     
-    <com.inhuasoft.smart.server.ui.AddressText
+    <com.inhuasoft.smart.client.ui.AddressText
         android:id="@+id/Adress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,7 @@
         android:paddingRight="20dp"
        	android:layout_gravity="center" />
 	
-    <com.inhuasoft.smart.server.ui.Numpad 
+    <com.inhuasoft.smart.client.ui.Numpad 
 	    android:id="@+id/Dialer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,7 +38,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/add_contact" />
         
-        <com.inhuasoft.smart.server.ui.CallButton
+        <com.inhuasoft.smart.client.ui.CallButton
             android:id="@+id/Call"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -46,7 +46,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/call" />
         
-        <com.inhuasoft.smart.server.ui.EraseButton
+        <com.inhuasoft.smart.client.ui.EraseButton
             android:id="@+id/Erase"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -8,7 +8,7 @@
 	android:orientation="horizontal"
 	android:padding="10dp">
 	
-	<com.inhuasoft.smart.server.ui.AvatarWithShadow
+	<com.inhuasoft.smart.client.ui.AvatarWithShadow
 	    android:id="@+id/contactPicture"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"

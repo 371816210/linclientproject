@@ -35,7 +35,7 @@
 	    android:gravity="center"
 	    android:orientation="horizontal">
         
-        <com.inhuasoft.smart.server.ui.AvatarWithShadow
+        <com.inhuasoft.smart.client.ui.AvatarWithShadow
 		    android:id="@+id/contactPicture"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
