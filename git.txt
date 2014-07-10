@@ -1,0 +1,5 @@
+commit 152858a242049cc18b1bf47feeeb98987713b866
+Author: Sylvain Berfini <sylvain.berfini@linphone.org>
+Date:   Fri Jul 4 11:25:28 2014 +0200
+
+    Revert Makefile to continue to apply openh264 patch

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_mainpage_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="410.0dip"
+                android:layout_height="73.0dip"
+                android:layout_marginTop="95.0dip"
+                android:background="@drawable/ic_mainpage_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="432.0dip"
+                android:layout_height="99.0dip"
+                android:layout_marginTop="70.0dip"
+                android:background="@drawable/ic_mainpage_weather" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_main"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:orientation="horizontal" >
+           <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent"
+               android:src="@drawable/haibao"
+            />
+
+           
+
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dip"
+                android:background="@drawable/ic_mainpage_contacts" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
