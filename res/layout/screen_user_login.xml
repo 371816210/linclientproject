@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tv_login_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100.0dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_wo_link_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="智能安全  温馨常在"
+        android:textColor="@android:color/white"
+        android:textSize="24.0sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25.0dip"
+        android:background="@drawable/ic_login_edit_bg"
+        android:drawableLeft="@drawable/ic_login_edit_avt"
+        android:hint="@string/hint_username"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="16.0sp" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/ic_login_edit_bg"
+        android:drawableLeft="@drawable/ic_login_edit_pwd"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:hint="@string/hint_password"
+        android:textColor="@android:color/black"
+        android:textSize="16.0sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/string_remember_usernmae"
+            android:visibility="gone"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30.0dip"
+            android:visibility="gone"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/string_remember_password"
+            android:visibility="gone"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_login_button_bg"
+            android:text="@string/string_user_login"
+            android:textColor="@android:color/white"
+            android:textSize="28.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="5.0dip"
+            android:text="体验登陆"
+            android:visibility="gone"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+</LinearLayout>

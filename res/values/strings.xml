@@ -456,4 +456,7 @@
     <string name="hint_checkpassword">Password Again</string>
     <string name="hint_lawcopyright">Read and agree to the terms of the privacy policy</string>
     <string name="string_btn_reg">Sign   Up</string>
+    <string name="string_remember_usernmae">Remember the username</string>
+    <string name="string_remember_password">Remember the password</string>
+    <string name="string_user_login">Login</string>
 </resources>

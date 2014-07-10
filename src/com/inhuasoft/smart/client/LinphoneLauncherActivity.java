@@ -82,16 +82,17 @@ public class LinphoneLauncherActivity extends Activity {
 			classToStart = LinphoneActivity.class;
 		}*/
 		//zwzhu modify 
-		if(!LinphonePreferences.instance().isReg()||!LinphonePreferences.instance().isLogin())
+		if(!LinphonePreferences.instance().isLogin())
 		{
-			classToStart = LoginActivity.class;
+			classToStart = UserLoginActivity.class;
 		}
 		else {
-			//classToStart = LinphoneActivity.class;
-			 classToStart = MainActivity.class;
+			classToStart = LinphoneActivity.class;
+			//classToStart = MainActivity.class;
 		}
 		
-		LinphoneService.instance().setActivityToLaunchOnIncomingReceived(MainActivity.class);
+		//LinphoneService.instance().setActivityToLaunchOnIncomingReceived(MainActivity.class);
+		LinphoneService.instance().setActivityToLaunchOnIncomingReceived(LinphoneActivity.class);
 		mHandler.postDelayed(new Runnable() {
 			@Override
 			public void run() {

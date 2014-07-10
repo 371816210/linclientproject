@@ -78,11 +78,21 @@
         <activity android:name=".MainActivity"
             android:theme="@style/NoTitle"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             >
         </activity>
         <activity android:name=".LoginActivity"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait" 
+            android:theme="@style/BaseActivityStyle" 
+            android:launchMode="singleTask">
+            <intent-filter>
+                <!-- <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+
+        </activity>
+         <activity android:name=".UserLoginActivity"
+            android:screenOrientation="portrait" 
             android:theme="@style/BaseActivityStyle" 
             android:launchMode="singleTask">
             <intent-filter>
