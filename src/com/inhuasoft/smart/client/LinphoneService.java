@@ -349,7 +349,7 @@ public final class LinphoneService extends Service implements LinphoneServiceLis
 	private Object[] mSetForegroundArgs = new Object[1];
 	private Object[] mStartForegroundArgs = new Object[2];
 	private Object[] mStopForegroundArgs = new Object[1];
-	private Class<? extends Activity> incomingReceivedActivity = MainActivity.class;
+	private Class<? extends Activity> incomingReceivedActivity = ScreenHome.class;
 
 	void invokeMethod(Method method, Object[] args) {
 		try {

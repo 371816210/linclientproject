@@ -21,6 +21,15 @@ package com.inhuasoft.smart.client;
 
 
 
+import static android.content.Intent.ACTION_MAIN;
+
+import org.linphone.core.LinphoneCall;
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneCall.State;
+
+import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnCallStateChangedListener;
+import org.linphone.mediastream.Log;
+
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -30,18 +39,24 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
-public class ScreenHome extends Activity  implements OnClickListener{
+public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOnCallStateChangedListener {
 	private static String TAG = ScreenHome.class.getCanonicalName();
 	
 	public static final int HOME_INTENT_FLAG = 0;
@@ -60,10 +75,7 @@ public class ScreenHome extends Activity  implements OnClickListener{
 	private MenubarView mSwitchLayout;
 	private MenubarView mControlLayout;
 	private MenubarView mMoreLayout;
-//	private ImageView mVideoImageView;
-//	private ImageView mHomeImageView;
-//	private TextView mVideoTextView;
-//	private TextView mHomeTextView;
+
 
 	private FragmentManager mFragmentManager;
 
@@ -73,26 +85,52 @@ public class ScreenHome extends Activity  implements OnClickListener{
 	private ControlFragment mControlFragment;
 	private MoreFragment mMoreFragment;
 	private TwowayVideoFragment mTwowayVideoFragment;
+	private int mAlwaysChangingPhoneAngle = -1;
 	
+	private static ScreenHome instance;
 	
+	private Handler mHandler = new Handler();
+	private OrientationEventListener mOrientationHelper;
+	private static final int CALL_ACTIVITY = 19;
 	
-	private static final int MENU_EXIT = 0;
-	private static final int MENU_SETTINGS = 1;
-	
-	
+	static final boolean isInstanciated() {
+		return instance != null;
+	}
 
 	
-	private BroadcastReceiver mSipBroadCastRecv;
 	
 	
-	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if (!LinphoneService.isReady())  {
+			startService(new Intent(ACTION_MAIN).setClass(this, LinphoneService.class));
+		}
+		// Remove to avoid duplication of the listeners
+		LinphoneManager.removeListener(this);
+		LinphoneManager.addListener(this);
+		
+		LinphoneManager.getInstance().changeStatusToOnline();
+		
+		if (LinphoneManager.getLc().getCalls().length > 0) {
+			LinphoneCall call = LinphoneManager.getLc().getCalls()[0];
+			LinphoneCall.State callState = call.getState();
+			if (callState == State.IncomingReceived) {
+				startActivity(new Intent(this, IncomingCallActivity.class));
+			}
+		}
+	}
 
-	public boolean mIsVideoCall;
-	
 
+
+
+	public static final ScreenHome instance() {
+		if (instance != null)
+			return instance;
+		throw new RuntimeException("MainActivity not instantiated yet");
+	}
 	
-    public String sessionid ;
-   
 
 
 	private void initViews() {
@@ -107,12 +145,6 @@ public class ScreenHome extends Activity  implements OnClickListener{
 		mControlLayout.setOnClickListener(this);
 		mMoreLayout = (MenubarView) findViewById(R.id.more_layout);
 		mMoreLayout.setOnClickListener(this);
-		
-//		mVideoImageView = (ImageView) findViewById(R.id.video_image);
-//		mVideoTextView = (TextView) findViewById(R.id.video_text);
-		
-//		mHomeImageView = (ImageView) findViewById(R.id.home_image);
-//		mHomeTextView = (TextView) findViewById(R.id.home_text);
 
 	}
 	
@@ -123,6 +155,30 @@ public class ScreenHome extends Activity  implements OnClickListener{
 		initViews();
         mFragmentManager = getFragmentManager();
 		setTabSelection(HOME_INTENT_FLAG);
+		
+		
+		
+		int rotation = getWindowManager().getDefaultDisplay().getRotation();
+		switch (rotation) {
+		case Surface.ROTATION_0:
+			rotation = 0;
+			break;
+		case Surface.ROTATION_90:
+			rotation = 90;
+			break;
+		case Surface.ROTATION_180:
+			rotation = 180;
+			break;
+		case Surface.ROTATION_270:
+			rotation = 270;
+			break;
+		}
+
+		LinphoneManager.getLc().setDeviceRotation(rotation);
+		mAlwaysChangingPhoneAngle = rotation;
+		instance = this;
+		
+		
 		
 	}
 
@@ -164,9 +220,6 @@ public class ScreenHome extends Activity  implements OnClickListener{
 		switch (index) {
 		case HOME_INTENT_FLAG:
 			clearSelection();
-//			mHomeLayout.setBackgroundResource(R.drawable.ic_home_bottom_bar_bg);
-//			mHomeImageView.setSelected(true);
-//			mHomeTextView.setTextColor(getTextColor(R.color.orange));
 			mHomeLayout.setSelected(true);
 			if(mHomeFragment == null) {
 				mHomeFragment = new HomeFragment();
@@ -177,9 +230,6 @@ public class ScreenHome extends Activity  implements OnClickListener{
 			break;
 		case VIDEO_INTENT_FLAG:
 			clearSelection();
-//			mVideoLayout.setBackgroundResource(R.drawable.ic_home_bottom_bar_bg);
-//			mVideoImageView.setSelected(true);
-//			mVideoTextView.setTextColor(getTextColor(R.color.orange));
 			mVideoLayout.setSelected(true);
 			if(mVideoFragment == null) {
 				mVideoFragment = new VideoFragment();
@@ -240,13 +290,69 @@ public class ScreenHome extends Activity  implements OnClickListener{
 	
 	@Override
 	protected void onDestroy() {
-       if(mSipBroadCastRecv != null){
-    	   unregisterReceiver(mSipBroadCastRecv);
-    	   mSipBroadCastRecv = null;
-       }
-        
        super.onDestroy();
+       LinphoneManager.removeListener(this);
+		if (mOrientationHelper != null) {
+			mOrientationHelper.disable();
+			mOrientationHelper = null;
+		}
+
+		instance = null;
+		super.onDestroy();
+		System.gc();
 	}
+	
+	
+	public void exit() {
+		finish();
+		stopService(new Intent(ACTION_MAIN).setClass(this, LinphoneService.class));
+	}
+	
+	
+	
+	@Override
+	public void onCallStateChanged(LinphoneCall call, State state,
+			String message) {
+		// TODO Auto-generated method stub
+		if (state == State.IncomingReceived) {
+			startActivity(new Intent(this, IncomingCallActivity.class));
+		} else if (state == State.OutgoingInit) {
+			if (call.getCurrentParamsCopy().getVideoEnabled()) {
+				startVideoActivity(call);
+			} else {
+				startIncallActivity(call);
+			}
+		} else if (state == State.CallEnd || state == State.Error || state == State.CallReleased) {
+			// Convert LinphoneCore message for internalization
+			if (message != null && message.equals("Call declined.")) { 
+				displayCustomToast(getString(R.string.error_call_declined), Toast.LENGTH_LONG);
+			} else if (message != null && message.equals("Not Found")) {
+				displayCustomToast(getString(R.string.error_user_not_found), Toast.LENGTH_LONG);
+			} else if (message != null && message.equals("Unsupported media type")) {
+				displayCustomToast(getString(R.string.error_incompatible_media), Toast.LENGTH_LONG);
+			}
+			//resetClassicMenuLayoutAndGoBackToCallIfStillRunning();
+		}
+
+		//int missedCalls = LinphoneManager.getLc().getMissedCallsCount();
+		//displayMissedCalls(missedCalls);
+	}
+	
+	public void startVideoActivity(LinphoneCall currentCall) {
+		Intent intent = new Intent(this, InCallActivity.class);
+		intent.putExtra("VideoEnabled", true);
+		startOrientationSensor();
+		startActivityForResult(intent, CALL_ACTIVITY);
+	}
+
+	public void startIncallActivity(LinphoneCall currentCall) {
+		Intent intent = new Intent(this, InCallActivity.class);
+		intent.putExtra("VideoEnabled", false);
+		startOrientationSensor();
+		startActivityForResult(intent, CALL_ACTIVITY);
+	}
+	
+	
 	
 	private int getTextColor(int id) {
 		// TODO Auto-generated method stub
@@ -254,15 +360,6 @@ public class ScreenHome extends Activity  implements OnClickListener{
 	}
 
 	private void clearSelection() {
-		// TODO Auto-generated method stub
-//		mHomeLayout.setBackgroundDrawable(null);
-//		mHomeImageView.setSelected(false);
-//		mVideoImageView.setSelected(false);
-//		mHomeTextView.setTextColor(getResources().getColor(R.color.black));
-//		mVideoTextView.setTextColor(getResources().getColor(R.color.black));
-//		mVideoLayout.setBackgroundDrawable(null);
-//		mSwitchLayout.setBackgroundDrawable(null);
-//		mControlLayout.setBackgroundDrawable(null);
 		mHomeLayout.setSelected(false);
 		mVideoLayout.setSelected(false);
 		mSwitchLayout.setSelected(false);
@@ -296,6 +393,76 @@ public class ScreenHome extends Activity  implements OnClickListener{
 			transaction.hide(mTwowayVideoFragment);
 		}
 	}
+
+	
+	private class LocalOrientationEventListener extends OrientationEventListener {
+		public LocalOrientationEventListener(Context context) {
+			super(context);
+		}
+
+		@Override
+		public void onOrientationChanged(final int o) {
+			if (o == OrientationEventListener.ORIENTATION_UNKNOWN) {
+				return;
+			}
+
+			int degrees = 270;
+			if (o < 45 || o > 315)
+				degrees = 0;
+			else if (o < 135)
+				degrees = 90;
+			else if (o < 225)
+				degrees = 180;
+
+			if (mAlwaysChangingPhoneAngle == degrees) {
+				return;
+			}
+			mAlwaysChangingPhoneAngle = degrees;
+
+			Log.d("Phone orientation changed to ", degrees);
+			int rotation = (360 - degrees) % 360;
+			LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+			if (lc != null) {
+				lc.setDeviceRotation(rotation);
+				LinphoneCall currentCall = lc.getCurrentCall();
+				if (currentCall != null && currentCall.cameraEnabled() && currentCall.getCurrentParamsCopy().getVideoEnabled()) {
+					lc.updateCall(currentCall, null);
+				}
+			}
+		}
+	}
+	
+	
+	/**
+	 * Register a sensor to track phoneOrientation changes
+	 */
+	private synchronized void startOrientationSensor() {
+		if (mOrientationHelper == null) {
+			mOrientationHelper = new LocalOrientationEventListener(this);
+		}
+		mOrientationHelper.enable();
+	}
+	
+	public void displayCustomToast(final String message, final int duration) {
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				LayoutInflater inflater = getLayoutInflater();
+				View layout = inflater.inflate(R.layout.toast, (ViewGroup) findViewById(R.id.toastRoot));
+
+				TextView toastText = (TextView) layout.findViewById(R.id.toastMessage);
+				toastText.setText(message);
+
+				final Toast toast = new Toast(getApplicationContext());
+				toast.setGravity(Gravity.CENTER, 0, 0);
+				toast.setDuration(duration);
+				toast.setView(layout);
+				toast.show();
+			}
+		});
+	}
+	
+	
 	
 	
 }

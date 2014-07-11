@@ -80,7 +80,7 @@ public class UserLoginActivity extends Activity implements OnClickListener {
 	 private void  StartMain() {
 		 SetSystemInfo();
 		 //startActivity(new Intent().setClass(UserLoginActivity.this, MainActivity.class));
-		 startActivity(new Intent().setClass(UserLoginActivity.this, LinphoneActivity.class));
+		 startActivity(new Intent().setClass(UserLoginActivity.this, ScreenHome.class));
 		 finish();
 	}
 	
