@@ -23,9 +23,15 @@ package com.inhuasoft.smart.client;
 
 import static android.content.Intent.ACTION_MAIN;
 
+import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnMessageReceivedListener;
+import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnRegistrationStateChangedListener;
+
+import org.linphone.core.LinphoneAddress;
 import org.linphone.core.LinphoneCall;
+import org.linphone.core.LinphoneChatMessage;
 import org.linphone.core.LinphoneCore;
 import org.linphone.core.LinphoneCall.State;
+import org.linphone.core.LinphoneCore.RegistrationState;
 
 import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnCallStateChangedListener;
 import org.linphone.mediastream.Log;
@@ -56,7 +62,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOnCallStateChangedListener {
+public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOnCallStateChangedListener 
+,LinphoneOnMessageReceivedListener ,LinphoneOnRegistrationStateChangedListener{
 	private static String TAG = ScreenHome.class.getCanonicalName();
 	
 	public static final int HOME_INTENT_FLAG = 0;
@@ -69,6 +76,7 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 	public static final int TWOWAY_INTENT_FLAG = VDIAL_INTENT_FLAG + 1;
 	public static final int PHOTO_INTENT_FLAG = TWOWAY_INTENT_FLAG + 1;
 	public static final int RECORD_INTENT_FLAG = PHOTO_INTENT_FLAG + 1;
+	public static final int AUDIO_INTENT_FLAG = PHOTO_INTENT_FLAG + 1;
 	
 	private MenubarView mHomeLayout;
 	private MenubarView mVideoLayout;
@@ -85,6 +93,7 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 	private ControlFragment mControlFragment;
 	private MoreFragment mMoreFragment;
 	private TwowayVideoFragment mTwowayVideoFragment;
+	private AudioCall_New_Fragment mAudioCallFragment;
 	private int mAlwaysChangingPhoneAngle = -1;
 	
 	
@@ -287,6 +296,14 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 				transaction.show(mTwowayVideoFragment);
 			}
 			break;
+		case AUDIO_INTENT_FLAG:
+			if(mAudioCallFragment == null) {
+				mAudioCallFragment = new AudioCall_New_Fragment();
+				transaction.add(R.id.main_content, mAudioCallFragment);
+			} else {
+				transaction.show(mAudioCallFragment);
+			}
+			break;
 
 		default:
 			break;
@@ -326,11 +343,17 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 			startActivity(new Intent(this, IncomingCallActivity.class));
 		} else if (state == State.OutgoingInit) {
 			if (call.getCurrentParamsCopy().getVideoEnabled()) {
-				startVideoActivity(call);
+				startVideo(call);
 			} else {
-				startIncallActivity(call);
+				startIncall(call);
+				//startVideo(call);
 			}
-		} else if (state == State.CallEnd || state == State.Error || state == State.CallReleased) {
+		} 
+		else if (state == state.StreamsRunning)
+		{
+			
+		}
+		else if (state == State.CallEnd || state == State.Error || state == State.CallReleased) {
 			// Convert LinphoneCore message for internalization
 			if (message != null && message.equals("Call declined.")) { 
 				displayCustomToast(getString(R.string.error_call_declined), Toast.LENGTH_LONG);
@@ -346,18 +369,20 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 		//displayMissedCalls(missedCalls);
 	}
 	
-	public void startVideoActivity(LinphoneCall currentCall) {
-		Intent intent = new Intent(this, InCallActivity.class);
-		intent.putExtra("VideoEnabled", true);
-		startOrientationSensor();
-		startActivityForResult(intent, CALL_ACTIVITY);
+	public void startVideo(LinphoneCall currentCall) {
+		//Intent intent = new Intent(this, InCallActivity.class);
+		//intent.putExtra("VideoEnabled", true);
+		//startOrientationSensor();
+		//startActivityForResult(intent, CALL_ACTIVITY);
+		setTabSelection(ScreenHome.TWOWAY_INTENT_FLAG);
 	}
 
-	public void startIncallActivity(LinphoneCall currentCall) {
-		Intent intent = new Intent(this, InCallActivity.class);
-		intent.putExtra("VideoEnabled", false);
-		startOrientationSensor();
-		startActivityForResult(intent, CALL_ACTIVITY);
+	public void startIncall(LinphoneCall currentCall) {
+		//Intent intent = new Intent(this, InCallActivity.class);
+		//intent.putExtra("VideoEnabled", false);
+		//startOrientationSensor();
+		//startActivityForResult(intent, CALL_ACTIVITY);
+		setTabSelection(ScreenHome.AUDIO_INTENT_FLAG);
 	}
 	
 	
@@ -397,8 +422,11 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 		if (mMoreFragment != null) {
 			transaction.hide(mMoreFragment);
 		}
-		if(mTwowayVideoFragment != null) {
+		if (mTwowayVideoFragment != null) {
 			transaction.hide(mTwowayVideoFragment);
+		}
+		if (mAudioCallFragment != null) {
+			transaction.hide(mAudioCallFragment);
 		}
 	}
 
@@ -495,6 +523,25 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 				break;
 		}
 		return true;
+	}
+
+
+
+
+	@Override
+	public void onRegistrationStateChanged(RegistrationState state) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public void onMessageReceived(LinphoneAddress from,
+			LinphoneChatMessage message, int id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

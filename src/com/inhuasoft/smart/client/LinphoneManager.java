@@ -76,6 +76,7 @@ import org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration;
 import org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration.AndroidCamera;
 import org.linphone.mediastream.video.capture.hwconf.Hacks;
 
+import android.R.id;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -330,6 +331,7 @@ public class LinphoneManager implements LinphoneCoreListener {
 					boolean prefVideoEnable = mPrefs.isVideoEnabled();
 					boolean prefInitiateWithVideo = mPrefs.shouldInitiateVideoCall();
 					CallManager.getInstance().inviteAddress(lAddress, prefVideoEnable && prefInitiateWithVideo, isLowBandwidthConnection);
+					//CallManager.getInstance().inviteAddress(lAddress, true, isLowBandwidthConnection);
 				} else {
 					CallManager.getInstance().inviteAddress(lAddress, false, isLowBandwidthConnection);
 				}
@@ -820,7 +822,9 @@ public class LinphoneManager implements LinphoneCoreListener {
 		try {
 			if (LinphoneActivity.isInstanciated())
 				return LinphoneActivity.instance();
-			else if (InCallActivity.isInstanciated())
+			else if (ScreenHome.isInstanciated()) {
+				return ScreenHome.instance();
+			} else if (InCallActivity.isInstanciated())
 				return InCallActivity.instance();
 			else if (IncomingCallActivity.isInstanciated())
 				return IncomingCallActivity.instance();

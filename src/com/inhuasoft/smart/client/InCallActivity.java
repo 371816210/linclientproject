@@ -161,12 +161,12 @@ public class InCallActivity extends FragmentActivity implements
             		//switchCamera.setVisibility(View.VISIBLE); 
             	}
             } else {
-            	callFragment = new AudioCallFragment();
-            	audioCallFragment = (AudioCallFragment) callFragment;
+            //	callFragment = new AudioCallFragment();
+            //	audioCallFragment = (AudioCallFragment) callFragment;
         		//switchCamera.setVisibility(View.INVISIBLE);
             }
-            callFragment.setArguments(getIntent().getExtras());
-            getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, callFragment).commitAllowingStateLoss();
+           // callFragment.setArguments(getIntent().getExtras());
+           // getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, callFragment).commitAllowingStateLoss();
         }
 	}
 	
@@ -513,7 +513,7 @@ public class InCallActivity extends FragmentActivity implements
 		audioCallFragment = new AudioCallFragment();
 		
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.replace(R.id.fragmentContainer, audioCallFragment);
+	//	transaction.replace(R.id.fragmentContainer, audioCallFragment);
 		try {
 			transaction.commitAllowingStateLoss();
 		} catch (Exception e) {

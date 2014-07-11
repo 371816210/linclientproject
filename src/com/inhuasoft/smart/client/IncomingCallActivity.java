@@ -177,9 +177,9 @@ public class IncomingCallActivity extends Activity implements LinphoneOnCallStat
 			}
 			final LinphoneCallParams remoteParams = mCall.getRemoteParams();
 			if (remoteParams != null && remoteParams.getVideoEnabled() && LinphonePreferences.instance().shouldAutomaticallyAcceptVideoRequests()) {
-				ScreenHome.instance().startVideoActivity(mCall);
+				ScreenHome.instance().startVideo(mCall);
 			} else {
-				ScreenHome.instance().startIncallActivity(mCall);
+				ScreenHome.instance().startIncall(mCall);
 			}
 		}
 	}
