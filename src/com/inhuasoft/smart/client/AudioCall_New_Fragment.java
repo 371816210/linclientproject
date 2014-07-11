@@ -21,9 +21,12 @@ import org.linphone.core.LinphoneCall;
 import org.linphone.core.LinphoneCore;
 import org.linphone.core.LinphoneCall.State;
 
+import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnCallStateChangedListener;
+
 import android.R.raw;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SystemClock;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -34,15 +37,18 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 /**
  * @author Sylvain Berfini
  */
-public class AudioCall_New_Fragment extends Fragment implements OnClickListener {	
+public class AudioCall_New_Fragment extends Fragment implements OnClickListener ,LinphoneOnCallStateChangedListener {	
 	//private InCallActivity incallActvityInstance;
 	
     ImageButton btnHangUp ;
-	
+    private Handler mHandler = new Handler();
+    
+    
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, 
         Bundle savedInstanceState) {
@@ -70,13 +76,46 @@ public class AudioCall_New_Fragment extends Fragment implements OnClickListener 
 		timer.start();
 	}
 	
+	private void unregisterCallDurationTimer(View view) {		
+		Chronometer timer = (Chronometer) view.findViewById(R.id.callTimer_new);
+		if (timer == null) {
+			throw new IllegalArgumentException("no callee_duration view found");
+		}
+		//timer.setBase(SystemClock.elapsedRealtime());
+		timer.stop();
+		timer.setText("00:00");
+	}
+	
 	
 	
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
+		
 	}
 	
+	
+	
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+	    LinphoneManager.removeListener(this);
+	}
+
+
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		// Remove to avoid duplication of the listeners
+		LinphoneManager.removeListener(this);
+		LinphoneManager.addListener(this);
+	}
+
+
+
 	@Override
 	public void onStart() {
 		super.onStart();
@@ -148,5 +187,33 @@ public class AudioCall_New_Fragment extends Fragment implements OnClickListener 
 		{
 			hangUp();
 		}
+	}
+
+
+
+	@Override
+	public void onCallStateChanged(LinphoneCall call, State state,
+			String message) {
+		// TODO Auto-generated method stub
+	    if (state == State.StreamsRunning)
+		{
+	    	mHandler.post(new Runnable() {
+				@Override
+				public void run() {
+					 registerCallDurationTimer(getView(),LinphoneManager.getLc().getCalls()[0]);
+				}
+			});
+	    	
+		}
+	     if (state == State.CallEnd || state == State.Error || state == State.CallReleased) {
+
+			mHandler.post(new Runnable() {
+				@Override
+				public void run() {
+					unregisterCallDurationTimer(getView());
+				}
+			});
+		}
+		
 	}
 }

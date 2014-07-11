@@ -27,7 +27,7 @@ public class VideoFragment extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
-				LinphoneManager.getInstance().newOutgoingCall("myitm1@115.28.9.71","myitm1");
+				LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
 				// TODO Auto-generated method stub
 				//((ScreenHome)getActivity()).setTabSelection(ScreenHome.TWOWAY_INTENT_FLAG);
 				//ScreenHome.makeCall(((ScreenHome)getActivity()).mConfigurationService.getString(NgnConfigurationEntry.Devices_SIP_NUMBER, NgnConfigurationEntry.DEFAULT_Devices_SIP_NUMBER), NgnMediaType.AudioVideo);

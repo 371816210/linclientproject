@@ -10,7 +10,7 @@
         android:layout_marginBottom="5px"
         android:gravity="center_horizontal"
         android:text="In Call"
-        android:textColor="@color/color_white"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold" >
     </TextView>
@@ -41,7 +41,7 @@
         android:paddingLeft="10dp"
        	android:paddingRight="20dp"
        	android:gravity="center_vertical|right"
-	    android:textColor="@android:color/white"
+	    android:textColor="@android:color/black"
 	    android:textSize="22dp" />
         
     </RelativeLayout>
