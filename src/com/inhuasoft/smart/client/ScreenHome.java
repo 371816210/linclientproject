@@ -28,6 +28,7 @@ import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnRegistrationS
 
 import org.linphone.core.LinphoneAddress;
 import org.linphone.core.LinphoneCall;
+import org.linphone.core.LinphoneCallParams;
 import org.linphone.core.LinphoneChatMessage;
 import org.linphone.core.LinphoneCore;
 import org.linphone.core.LinphoneCall.State;
@@ -35,6 +36,7 @@ import org.linphone.core.LinphoneCore.RegistrationState;
 
 import com.inhuasoft.smart.client.LinphoneSimpleListener.LinphoneOnCallStateChangedListener;
 import org.linphone.mediastream.Log;
+import org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -110,6 +112,9 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 	private OrientationEventListener mOrientationHelper;
 	private static final int CALL_ACTIVITY = 19;
 	
+	private boolean isSpeakerEnabled = false, isMicMuted = false, isVideoEnabled, isTransferAllowed, isAnimationDisabled;
+	private int cameraNumber;
+	
 	static final boolean isInstanciated() {
 		return instance != null;
 	}
@@ -175,6 +180,7 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 		
 		
 		
+		cameraNumber = AndroidCameraConfiguration.retrieveCameras().length;
 		int rotation = getWindowManager().getDefaultDisplay().getRotation();
 		switch (rotation) {
 		case Surface.ROTATION_0:
@@ -225,6 +231,47 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 	}
 	
 	
+	
+	private void switchVideo(final boolean displayVideo, final boolean isInitiator) {
+		final LinphoneCall call = LinphoneManager.getLc().getCalls()[0];
+		if (call == null) {
+			return;
+		}
+		
+		mHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				if (!displayVideo) {
+					if (isInitiator) {
+						LinphoneCallParams params = call.getCurrentParamsCopy();
+						params.setVideoEnabled(false);
+						LinphoneManager.getLc().updateCall(call, params);
+					}
+					showAudioView();
+				} else {
+					if (!call.getRemoteParams().isLowBandwidthEnabled()) {
+						LinphoneManager.getInstance().addVideo();
+						showVideoView();
+					} else {
+						displayCustomToast(getString(R.string.error_low_bandwidth), Toast.LENGTH_LONG);
+					}
+				}
+			}
+		});
+	}
+	
+	
+	private void showAudioView() {
+		//video.setBackgroundResource(R.drawable.video_on);
+
+		LinphoneManager.startProximitySensorForActivity(ScreenHome.this);
+		setTabSelection(ScreenHome.AUDIO_INTENT_FLAG);
+	}
+	
+	private void showVideoView() {
+		LinphoneManager.stopProximitySensorForActivity(ScreenHome.this);
+		setTabSelection(ScreenHome.TWOWAY_INTENT_FLAG);
+	}
 	
 	public void setTabSelection(int index) {
 		// TODO Auto-generated method stub
@@ -346,12 +393,22 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 				startVideo(call);
 			} else {
 				startIncall(call);
-				//startVideo(call);
 			}
 		} 
-		else if (state == state.StreamsRunning)
+		else if (state == State.StreamsRunning)
 		{
-			
+
+			boolean isVideoEnabledInCall = call.getCurrentParamsCopy().getVideoEnabled();
+			if (isVideoEnabledInCall != isVideoEnabled) {
+				isVideoEnabled = isVideoEnabledInCall;
+				switchVideo(isVideoEnabled, false);
+			}
+
+			//LinphoneManager.getLc().enableSpeaker(isSpeakerEnabled);
+
+			//isMicMuted = LinphoneManager.getLc().isMicMuted();
+			//enableAndRefreshInCallActions();
+		
 		}
 		else if (state == State.CallEnd || state == State.Error || state == State.CallReleased) {
 			// Convert LinphoneCore message for internalization
@@ -362,6 +419,13 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 			} else if (message != null && message.equals("Unsupported media type")) {
 				displayCustomToast(getString(R.string.error_incompatible_media), Toast.LENGTH_LONG);
 			}
+			mHandler.post(new Runnable() {
+				@Override
+				public void run() {
+					setTabSelection(ScreenHome.HOME_INTENT_FLAG);
+				}
+			});
+			//setTabSelection(ScreenHome.HOME_INTENT_FLAG);
 			//resetClassicMenuLayoutAndGoBackToCallIfStillRunning();
 		}
 
@@ -374,6 +438,7 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 		//intent.putExtra("VideoEnabled", true);
 		//startOrientationSensor();
 		//startActivityForResult(intent, CALL_ACTIVITY);
+		isVideoEnabled = true ;
 		setTabSelection(ScreenHome.TWOWAY_INTENT_FLAG);
 	}
 
@@ -382,6 +447,7 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 		//intent.putExtra("VideoEnabled", false);
 		//startOrientationSensor();
 		//startActivityForResult(intent, CALL_ACTIVITY);
+		isVideoEnabled = false ;
 		setTabSelection(ScreenHome.AUDIO_INTENT_FLAG);
 	}
 	
