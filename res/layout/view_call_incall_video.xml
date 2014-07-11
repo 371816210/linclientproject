@@ -22,7 +22,7 @@
         android:visibility="visible" 
         android:layout_height="match_parent" 
         android:layout_width="match_parent" 
-        android:id="@+id/videoSurface" />
+        android:id="@+id/videoSurface1" />
         </LinearLayout>
 
         <LinearLayout
@@ -51,7 +51,7 @@
                 android:src="@drawable/ic_mainpage_mute" />
 
             <ImageButton
-                android:id="@+id/imgbtn_hang_up"
+                android:id="@+id/imgbtn_hang_up1"
                 android:layout_width="0.0dip"
                 android:layout_height="40.0dip"
                 android:layout_marginLeft="2.0dip"
@@ -71,7 +71,7 @@
                 android:src="@drawable/phone_resume_48" />
 
             <ImageButton
-                android:id="@+id/imgbtn_capture_img"
+                android:id="@+id/imgbtn_capture_img1"
                 android:layout_width="0.0dip"
                 android:layout_height="40.0dip"
                 android:layout_marginLeft="2.0dip"
@@ -115,7 +115,7 @@
                 android:layout_marginRight="4dp"
                 android:orientation="vertical" >
                 <SurfaceView
-	            android:id="@+id/videoCaptureSurface"
+	            android:id="@+id/videoCaptureSurface1"
 	            android:layout_width="fill_parent"
 	            android:layout_height="fill_parent"
 	             />
