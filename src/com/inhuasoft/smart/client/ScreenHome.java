@@ -87,6 +87,14 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 	private TwowayVideoFragment mTwowayVideoFragment;
 	private int mAlwaysChangingPhoneAngle = -1;
 	
+	
+	
+	private static final int MENU_EXIT = 0;
+	private static final int MENU_SETTINGS = 1;
+	private static final int MENU_ORGIN = 2;
+	
+	
+	
 	private static ScreenHome instance;
 	
 	private Handler mHandler = new Handler();
@@ -460,6 +468,33 @@ public class ScreenHome extends Activity  implements OnClickListener ,LinphoneOn
 				toast.show();
 			}
 		});
+	}
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		menu.add(Menu.NONE, ScreenHome.MENU_SETTINGS, 0, "Settings");
+		menu.add(Menu.NONE, ScreenHome.MENU_ORGIN, 0, "Orgin");
+	    menu.add(Menu.NONE, ScreenHome.MENU_EXIT, 0, "Exit");
+		return true;
+	}
+
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+			case ScreenHome.MENU_EXIT:
+				 exit();
+				break;
+			case ScreenHome.MENU_SETTINGS:
+				
+				break;
+            case ScreenHome.MENU_ORGIN:
+            	startActivity(new Intent().setClass(ScreenHome.this,LinphoneActivity.class));
+				break;
+		}
+		return true;
 	}
 	
 	
