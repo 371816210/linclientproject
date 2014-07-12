@@ -333,7 +333,7 @@ public class LinphonePreferences {
 		AccountBuilder builder = new AccountBuilder(LinphoneManager.getLc())
 		.setUsername(username)
 		.setDomain(domain)
-		.setPassword(password);
+		.setPassword(password).setTransport(TransportType.LinphoneTransportTcp);
 		
 		try {
 			builder.saveNewAccount();
