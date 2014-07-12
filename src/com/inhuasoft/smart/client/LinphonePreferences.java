@@ -117,7 +117,15 @@ public class LinphonePreferences {
 		 return getConfig().getString("app", "usersip", "");
 	}
 	
-	public void setUserSip(String usersip) {
+	public void setUserSip(String user) {
+		 getConfig().setString("app", "user", user);
+	}
+	
+	public String getUser() {
+		 return getConfig().getString("app", "user", "");
+	}
+	
+	public void setUser(String usersip) {
 		 getConfig().setString("app", "usersip", usersip);
 	}
 	
@@ -127,6 +135,14 @@ public class LinphonePreferences {
 	
 	public void setDeviceSip(String devicesip) {
 		getConfig().setString("app", "devicesip", devicesip);
+	}
+	
+	public String  getDevice() 	{
+		 return getConfig().getString("app", "device", "");
+	}
+	
+	public void setDevice(String device) {
+		getConfig().setString("app", "devicesip", device);
 	}
 	//zwzhu add end 
 	
@@ -333,7 +349,7 @@ public class LinphonePreferences {
 		AccountBuilder builder = new AccountBuilder(LinphoneManager.getLc())
 		.setUsername(username)
 		.setDomain(domain)
-		.setPassword(password).setTransport(TransportType.LinphoneTransportTcp);
+		.setPassword(password);
 		
 		try {
 			builder.saveNewAccount();

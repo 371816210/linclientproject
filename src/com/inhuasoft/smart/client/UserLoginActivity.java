@@ -177,7 +177,7 @@ public class UserLoginActivity extends Activity implements OnClickListener {
 			int eventType = parser.getEventType();
 			while (eventType != XmlPullParser.END_DOCUMENT) {
 				switch (eventType) {
-				case XmlPullParser.START_TAG:// ��ʼԪ���¼�
+				case XmlPullParser.START_TAG:
 					String name = parser.getName();
 					if (name.equalsIgnoreCase(nodeName)) {
 						returnStr = parser.nextText();
@@ -264,6 +264,7 @@ public class UserLoginActivity extends Activity implements OnClickListener {
 				     DeviceNo = ParserXml(returncode, "DeviceNo");
 					if (DeviceNo != null  && !"".equals(DeviceNo)) {
 						LinphonePreferences.instance().setDeviceSip("sip:"+DeviceNo+"@115.28.9.71");
+						LinphonePreferences.instance().setDevice(DeviceNo);
 						Message message = mHandler.obtainMessage(User_Login_Success);
 						message.sendToTarget();
 					}
