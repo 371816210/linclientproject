@@ -14,6 +14,7 @@
     <item name="more_layout" type="id"></item>
     
     <item name="twoway_video_butt" type="id"></item>
+    <item name="twoway_audio_butt" type="id"></item>
     
     <item name="menubar_layout" type="id"></item>
     <item name="menubar_image" type="id"></item>

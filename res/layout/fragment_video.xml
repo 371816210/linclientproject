@@ -84,6 +84,7 @@
             android:padding="8.0dip" >
 
             <ImageView
+                android:id="@id/twoway_audio_butt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/app_name"

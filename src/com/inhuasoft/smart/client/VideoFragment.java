@@ -27,10 +27,20 @@ public class VideoFragment extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
+				LinphonePreferences.instance().setInitiateVideoCall(true);
+				LinphonePreferences.instance().setAutomaticallyAcceptVideoRequests(true);
 				LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
-				// TODO Auto-generated method stub
-				//((ScreenHome)getActivity()).setTabSelection(ScreenHome.TWOWAY_INTENT_FLAG);
-				//ScreenHome.makeCall(((ScreenHome)getActivity()).mConfigurationService.getString(NgnConfigurationEntry.Devices_SIP_NUMBER, NgnConfigurationEntry.DEFAULT_Devices_SIP_NUMBER), NgnMediaType.AudioVideo);
+			}
+		});
+		
+		mAudioButton = (ImageView) getActivity().findViewById(R.id.twoway_audio_butt);
+		mAudioButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				LinphonePreferences.instance().setInitiateVideoCall(false);
+				LinphonePreferences.instance().setAutomaticallyAcceptVideoRequests(false);
+				LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
 			}
 		});
 	
