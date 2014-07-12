@@ -165,9 +165,11 @@ public class Compatibility {
 		Notification notif = null;
 		
 		if (Version.sdkAboveOrEqual(Version.API16_JELLY_BEAN_41)) {
-			notif = ApiSixteenPlus.createInCallNotification(context, title, msg, iconID, contactIcon, contactName, intent);
+			//notif = ApiSixteenPlus.createInCallNotification(context, title, msg, iconID, contactIcon, contactName, intent);
+			notif = ApiSixteenPlus.createInCallNotification(context, title, msg, iconID, contactIcon, "", intent);
 		} else if (Version.sdkAboveOrEqual(Version.API11_HONEYCOMB_30)) {
-			notif = ApiElevenPlus.createInCallNotification(context, title, msg, iconID, contactIcon, contactName, intent);
+			//notif = ApiElevenPlus.createInCallNotification(context, title, msg, iconID, contactIcon, contactName, intent);
+			notif = ApiElevenPlus.createInCallNotification(context, title, msg, iconID, contactIcon, "", intent);
 		} else {
 			notif = ApiFivePlus.createInCallNotification(context, title, msg, iconID, intent);
 		}

@@ -149,7 +149,7 @@ public final class LinphoneService extends Service implements LinphoneServiceLis
 
 		Bitmap bm = null;
 		try {
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.logo_linphone_57x57);
+			bm = BitmapFactory.decodeResource(getResources(), R.drawable.icon);
 		} catch (Exception e) {
 		}
 		mNotif = Compatibility.createNotification(this, mNotificationTitle, "", R.drawable.status_level, IC_LEVEL_OFFLINE, bm, mNotifContentIntent);
@@ -281,7 +281,7 @@ public final class LinphoneService extends Service implements LinphoneServiceLis
 		
 		Bitmap bm = null;
 		try {
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.logo_linphone_57x57);
+			bm = BitmapFactory.decodeResource(getResources(), R.drawable.icon);
 		} catch (Exception e) {
 		}
 		mCustomNotif = Compatibility.createNotification(this, title, message, iconResourceID, 0, bm, notifContentIntent);
@@ -446,10 +446,11 @@ public final class LinphoneService extends Service implements LinphoneServiceLis
 
 		Bitmap bm = null;
 		try {
-			bm = BitmapFactory.decodeResource(getResources(), R.drawable.logo_linphone_57x57);
+			bm = BitmapFactory.decodeResource(getResources(), R.drawable.icon);
 		} catch (Exception e) {
 		}
-		mNotif = Compatibility.createNotification(this, mNotificationTitle, text, R.drawable.status_level, level, bm, mNotifContentIntent);
+		//mNotif = Compatibility.createNotification(this, mNotificationTitle, text, R.drawable.status_level, level, bm, mNotifContentIntent);
+		mNotif = Compatibility.createNotification(this, mNotificationTitle, "", R.drawable.status_level, level, bm, mNotifContentIntent);
 		notifyWrapper(NOTIF_ID, mNotif);
 	}
 
