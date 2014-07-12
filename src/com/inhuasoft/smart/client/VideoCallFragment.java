@@ -43,6 +43,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 /**
@@ -57,7 +58,8 @@ public class VideoCallFragment extends Fragment implements OnGestureListener, On
 	private float mZoomCenterX, mZoomCenterY;
 	private CompatibilityScaleGestureDetector mScaleDetector;
 	private InCallActivity inCallActivity;
-	ImageButton imgbtn_hangup,imgbtn_capture_img,imgbtn_record_video;
+	ImageButton imgbtn_capture_img,imgbtn_record_video;
+	Button imgbtn_hangup;
 	
 	@SuppressWarnings("deprecation") // Warning useless because value is ignored and automatically set by new APIs.
 	@Override
@@ -66,7 +68,7 @@ public class VideoCallFragment extends Fragment implements OnGestureListener, On
         View view = inflater.inflate(R.layout.view_call_incall_video, container, false);
         
         
-        imgbtn_hangup = (ImageButton) view.findViewById(R.id.imgbtn_hang_up);
+        imgbtn_hangup = (Button) view.findViewById(R.id.imgbtn_hang_up);
         imgbtn_hangup.setOnClickListener(this);
         imgbtn_capture_img = (ImageButton)view.findViewById(R.id.imgbtn_capture_img);
         imgbtn_capture_img.setOnClickListener(this);

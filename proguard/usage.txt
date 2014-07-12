@@ -1,0 +1,2088 @@
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompatIcs
+android.support.v4.app.ActivityCompat
+android.support.v4.app.ActivityCompatHoneycomb:
+    27:27:ActivityCompatHoneycomb()
+    34:35:static void dump(android.app.Activity,java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+android.support.v4.app.BackStackRecord:
+    static final java.lang.String TAG
+    static final int OP_NULL
+    static final int OP_ADD
+    static final int OP_REPLACE
+    static final int OP_REMOVE
+    static final int OP_HIDE
+    static final int OP_SHOW
+    static final int OP_DETACH
+    static final int OP_ATTACH
+    296:296:public int getId()
+    300:300:public int getBreadCrumbTitleRes()
+    304:304:public int getBreadCrumbShortTitleRes()
+    308:311:public java.lang.CharSequence getBreadCrumbTitle()
+    315:318:public java.lang.CharSequence getBreadCrumbShortTitle()
+    337:338:public android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String)
+    342:343:public android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment)
+    392:397:public android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment)
+    401:406:public android.support.v4.app.FragmentTransaction hide(android.support.v4.app.Fragment)
+    410:415:public android.support.v4.app.FragmentTransaction show(android.support.v4.app.Fragment)
+    419:424:public android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment)
+    428:433:public android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment)
+    437:437:public android.support.v4.app.FragmentTransaction setCustomAnimations(int,int)
+    450:451:public android.support.v4.app.FragmentTransaction setTransition(int)
+    455:456:public android.support.v4.app.FragmentTransaction setTransitionStyle(int)
+    470:470:public boolean isAddToBackStackAllowed()
+    474:479:public android.support.v4.app.FragmentTransaction disallowAddToBackStack()
+    483:485:public android.support.v4.app.FragmentTransaction setBreadCrumbTitle(int)
+    489:491:public android.support.v4.app.FragmentTransaction setBreadCrumbTitle(java.lang.CharSequence)
+    495:497:public android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(int)
+    501:503:public android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(java.lang.CharSequence)
+    727:727:public int getTransition()
+    731:731:public int getTransitionStyle()
+    735:735:public boolean isEmpty()
+android.support.v4.app.DialogFragment
+android.support.v4.app.Fragment:
+    static final int INITIALIZING
+    static final int CREATED
+    static final int ACTIVITY_CREATED
+    static final int STOPPED
+    static final int STARTED
+    static final int RESUMED
+    465:465:public final int getId()
+    472:472:public final java.lang.String getTag()
+    525:527:public void setTargetFragment(android.support.v4.app.Fragment,int)
+    533:533:public final android.support.v4.app.Fragment getTargetFragment()
+    540:540:public final int getTargetRequestCode()
+    567:567:public final java.lang.CharSequence getText(int)
+    590:590:public final varargs java.lang.String getString(int,java.lang.Object[])
+    617:617:public final boolean isDetached()
+    626:626:public final boolean isRemoving()
+    637:637:public final boolean isInLayout()
+    645:645:public final boolean isResumed()
+    694:695:public void setRetainInstance(boolean)
+    698:698:public final boolean getRetainInstance()
+    709:715:public void setHasOptionsMenu(boolean)
+    727:733:public void setMenuVisibility(boolean)
+    749:754:public void setUserVisibleHint(boolean)
+    761:761:public boolean getUserVisibleHint()
+    768:776:public android.support.v4.app.LoaderManager getLoaderManager()
+    1233:1234:public void unregisterForContextMenu(android.view.View)
+android.support.v4.app.FragmentActivity:
+    private static final java.lang.String TAG
+    private static final java.lang.String FRAGMENTS_TAG
+    private static final int HONEYCOMB
+    static final int MSG_REALLY_STOPPED
+    static final int MSG_RESUME_PENDING
+    576:578:public java.lang.Object getLastCustomNonConfigurationInstance()
+    729:734:public android.support.v4.app.LoaderManager getSupportLoaderManager()
+android.support.v4.app.FragmentActivity$FragmentTag:
+    public static final int Fragment_id
+    public static final int Fragment_name
+    public static final int Fragment_tag
+    122:122:FragmentActivity$FragmentTag()
+android.support.v4.app.FragmentManager:
+    public static final int POP_BACK_STACK_INCLUSIVE
+    139:139:public android.support.v4.app.FragmentTransaction openTransaction()
+    public abstract android.support.v4.app.Fragment findFragmentByTag(java.lang.String)
+    public abstract void popBackStack()
+    public abstract void popBackStack(java.lang.String,int)
+    public abstract void popBackStack(int,int)
+    public abstract boolean popBackStackImmediate(int,int)
+    public abstract int getBackStackEntryCount()
+    public abstract android.support.v4.app.FragmentManager$BackStackEntry getBackStackEntryAt(int)
+    public abstract void addOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    public abstract void removeOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    public abstract void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String)
+    public abstract void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+    334:335:public static void enableDebugLogging(boolean)
+android.support.v4.app.FragmentManager$BackStackEntry
+android.support.v4.app.FragmentManagerImpl:
+    static final java.lang.String TAG
+    static final java.lang.String TARGET_REQUEST_CODE_STATE_TAG
+    static final java.lang.String TARGET_STATE_TAG
+    static final java.lang.String VIEW_STATE_TAG
+    static final java.lang.String USER_VISIBLE_HINT_TAG
+    static final int ANIM_DUR
+    public static final int ANIM_STYLE_OPEN_ENTER
+    public static final int ANIM_STYLE_OPEN_EXIT
+    public static final int ANIM_STYLE_CLOSE_ENTER
+    public static final int ANIM_STYLE_CLOSE_EXIT
+    public static final int ANIM_STYLE_FADE_ENTER
+    public static final int ANIM_STYLE_FADE_EXIT
+    436:441:public void popBackStack()
+    452:457:public void popBackStack(java.lang.String,int)
+    468:476:public void popBackStack(int,int)
+    480:485:public boolean popBackStackImmediate(int,int)
+    490:490:public int getBackStackEntryCount()
+    495:495:public android.support.v4.app.FragmentManager$BackStackEntry getBackStackEntryAt(int)
+    500:504:public void addOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    508:511:public void removeOnBackStackChangedListener(android.support.v4.app.FragmentManager$OnBackStackChangedListener)
+    1301:1309:public android.support.v4.app.Fragment findFragmentByWho(java.lang.String)
+android.support.v4.app.FragmentManagerImpl$2
+android.support.v4.app.FragmentManagerImpl$3
+android.support.v4.app.FragmentManagerImpl$4
+android.support.v4.app.FragmentPagerAdapter
+android.support.v4.app.FragmentStatePagerAdapter
+android.support.v4.app.FragmentTransaction:
+    public static final int TRANSIT_ENTER_MASK
+    public static final int TRANSIT_EXIT_MASK
+    public static final int TRANSIT_UNSET
+    public static final int TRANSIT_NONE
+    public static final int TRANSIT_FRAGMENT_OPEN
+    public static final int TRANSIT_FRAGMENT_CLOSE
+    public static final int TRANSIT_FRAGMENT_FADE
+    public abstract android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String)
+    public abstract android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction hide(android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction show(android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment)
+    public abstract android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment)
+    public abstract boolean isEmpty()
+    public abstract android.support.v4.app.FragmentTransaction setCustomAnimations(int,int)
+    public abstract android.support.v4.app.FragmentTransaction setTransition(int)
+    public abstract android.support.v4.app.FragmentTransaction setTransitionStyle(int)
+    public abstract boolean isAddToBackStackAllowed()
+    public abstract android.support.v4.app.FragmentTransaction disallowAddToBackStack()
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbTitle(int)
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbTitle(java.lang.CharSequence)
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(int)
+    public abstract android.support.v4.app.FragmentTransaction setBreadCrumbShortTitle(java.lang.CharSequence)
+android.support.v4.app.ListFragment:
+    static final int INTERNAL_EMPTY_ID
+    static final int INTERNAL_PROGRESS_CONTAINER_ID
+    static final int INTERNAL_LIST_CONTAINER_ID
+    198:200:public void setSelection(int)
+    206:207:public int getSelectedItemPosition()
+    214:215:public long getSelectedItemId()
+    222:223:public android.widget.ListView getListView()
+    232:241:public void setEmptyText(java.lang.CharSequence)
+    258:259:public void setListShown(boolean)
+    266:267:public void setListShownNoAnimation(boolean)
+    319:319:public android.widget.ListAdapter getListAdapter()
+android.support.v4.app.LoaderManager:
+    public abstract android.support.v4.content.Loader initLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    public abstract android.support.v4.content.Loader restartLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    public abstract void destroyLoader(int)
+    public abstract android.support.v4.content.Loader getLoader(int)
+    public abstract void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+    177:178:public static void enableDebugLogging(boolean)
+android.support.v4.app.LoaderManagerImpl:
+    static final java.lang.String TAG
+    boolean mRetainingStarted
+    boolean mCreatingLoader
+    486:489:private android.support.v4.app.LoaderManagerImpl$LoaderInfo createLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    495:500:private android.support.v4.app.LoaderManagerImpl$LoaderInfo createAndInstallLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    540:562:public android.support.v4.content.Loader initLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    590:644:public android.support.v4.content.Loader restartLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+    655:675:public void destroyLoader(int)
+    683:694:public android.support.v4.content.Loader getLoader(int)
+android.support.v4.app.LoaderManagerImpl$LoaderInfo:
+    226:230:public LoaderManagerImpl$LoaderInfo(android.support.v4.app.LoaderManagerImpl,int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
+android.support.v4.app.NavUtils
+android.support.v4.app.NavUtils$NavUtilsImpl
+android.support.v4.app.NavUtils$NavUtilsImplBase
+android.support.v4.app.NavUtils$NavUtilsImplJB
+android.support.v4.app.NavUtilsJB
+android.support.v4.app.NotificationCompat
+android.support.v4.app.NotificationCompat$Builder
+android.support.v4.app.NotificationCompat$NotificationCompatImpl
+android.support.v4.app.NotificationCompat$NotificationCompatImplBase
+android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb
+android.support.v4.app.NotificationCompatHoneycomb
+android.support.v4.app.ServiceCompat
+android.support.v4.app.ShareCompat
+android.support.v4.app.ShareCompat$IntentBuilder
+android.support.v4.app.ShareCompat$IntentReader
+android.support.v4.app.ShareCompat$ShareCompatImpl
+android.support.v4.app.ShareCompat$ShareCompatImplBase
+android.support.v4.app.ShareCompat$ShareCompatImplICS
+android.support.v4.app.ShareCompat$ShareCompatImplJB
+android.support.v4.app.ShareCompatICS
+android.support.v4.app.ShareCompatJB
+android.support.v4.app.TaskStackBuilder
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImpl
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplBase
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplHoneycomb
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplJellybean
+android.support.v4.app.TaskStackBuilderHoneycomb
+android.support.v4.app.TaskStackBuilderJellybean
+android.support.v4.content.AsyncTaskLoader:
+    static final java.lang.String TAG
+    static final boolean DEBUG
+    103:107:public void setUpdateThrottle(long)
+    254:262:public void waitForLoader()
+android.support.v4.content.AsyncTaskLoader$LoadTask:
+    40:40:static synthetic java.util.concurrent.CountDownLatch access$000(android.support.v4.content.AsyncTaskLoader$LoadTask)
+android.support.v4.content.ContextCompat
+android.support.v4.content.ContextCompatHoneycomb
+android.support.v4.content.ContextCompatJellybean
+android.support.v4.content.CursorLoader:
+    95:97:public CursorLoader(android.content.Context)
+    163:163:public android.net.Uri getUri()
+    167:168:public void setUri(android.net.Uri)
+    171:171:public java.lang.String[] getProjection()
+    175:176:public void setProjection(java.lang.String[])
+    179:179:public java.lang.String getSelection()
+    183:184:public void setSelection(java.lang.String)
+    187:187:public java.lang.String[] getSelectionArgs()
+    191:192:public void setSelectionArgs(java.lang.String[])
+    195:195:public java.lang.String getSortOrder()
+    199:200:public void setSortOrder(java.lang.String)
+android.support.v4.content.IntentCompat
+android.support.v4.content.Loader:
+    118:118:public int getId()
+    261:263:public void abandon()
+    275:275:protected void onAbandon()
+android.support.v4.content.LocalBroadcastManager
+android.support.v4.content.LocalBroadcastManager$1
+android.support.v4.content.LocalBroadcastManager$BroadcastRecord
+android.support.v4.content.LocalBroadcastManager$ReceiverRecord
+android.support.v4.content.ModernAsyncTask:
+    private static final java.lang.String LOG_TAG
+    private static final int CORE_POOL_SIZE
+    private static final int MAXIMUM_POOL_SIZE
+    private static final int KEEP_ALIVE
+    private static final int MESSAGE_POST_RESULT
+    private static final int MESSAGE_POST_PROGRESS
+    106:107:public static void init()
+    111:112:public static void setDefaultExecutor(java.util.concurrent.Executor)
+    169:169:public final android.support.v4.content.ModernAsyncTask$Status getStatus()
+    321:321:public final java.lang.Object get()
+    341:341:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
+    371:371:public final varargs android.support.v4.content.ModernAsyncTask execute(java.lang.Object[])
+    433:434:public static void execute(java.lang.Runnable)
+    451:455:protected final varargs void publishProgress(java.lang.Object[])
+android.support.v4.content.pm.ActivityInfoCompat
+android.support.v4.database.DatabaseUtilsCompat
+android.support.v4.net.ConnectivityManagerCompat
+android.support.v4.net.ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$ConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$GingerbreadConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$HoneycombMR2ConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$JellyBeanConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompatGingerbread
+android.support.v4.net.ConnectivityManagerCompatHoneycombMR2
+android.support.v4.net.ConnectivityManagerCompatJellyBean
+android.support.v4.net.TrafficStatsCompat
+android.support.v4.net.TrafficStatsCompat$1
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl$1
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags
+android.support.v4.net.TrafficStatsCompat$IcsTrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompat$TrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompatIcs
+android.support.v4.os.ParcelableCompat:
+    26:42:public ParcelableCompat()
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub:
+    22:22:ParcelableCompatCreatorHoneycombMR2Stub()
+android.support.v4.util.DebugUtils:
+    25:25:public DebugUtils()
+android.support.v4.util.LongSparseArray
+android.support.v4.util.LruCache
+android.support.v4.util.SparseArrayCompat:
+    107:111:public void removeAtRange(int,int)
+    236:241:public void setValueAt(int,java.lang.Object)
+    249:253:public int indexOfKey(int)
+    265:273:public int indexOfValue(java.lang.Object)
+    296:323:public void append(int,java.lang.Object)
+android.support.v4.util.TimeUtils:
+    public static final int HUNDRED_DAY_FIELD_LEN
+    private static final int SECONDS_PER_MINUTE
+    private static final int SECONDS_PER_HOUR
+    private static final int SECONDS_PER_DAY
+    27:27:public TimeUtils()
+    148:152:public static void formatDuration(long,java.lang.StringBuilder)
+android.support.v4.view.AccessibilityDelegateCompat
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl$1
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl$1
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateStubImpl
+android.support.v4.view.AccessibilityDelegateCompatIcs
+android.support.v4.view.AccessibilityDelegateCompatIcs$1
+android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge
+android.support.v4.view.AccessibilityDelegateCompatJellyBean
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$1
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean
+android.support.v4.view.KeyEventCompat:
+    25:95:public KeyEventCompat()
+    127:127:public static int normalizeMetaState(int)
+    131:131:public static boolean metaStateHasModifiers(int,int)
+    135:135:public static boolean metaStateHasNoModifiers(int)
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl:
+    private static final int META_MODIFIER_MASK
+    private static final int META_ALL_MASK
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl:
+    98:98:public int normalizeMetaState(int)
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl:
+    public abstract int normalizeMetaState(int)
+android.support.v4.view.KeyEventCompatHoneycomb:
+    24:24:KeyEventCompatHoneycomb()
+    26:26:public static int normalizeMetaState(int)
+android.support.v4.view.MenuCompat
+android.support.v4.view.MenuCompat$BaseMenuVersionImpl
+android.support.v4.view.MenuCompat$HoneycombMenuVersionImpl
+android.support.v4.view.MenuCompat$MenuVersionImpl
+android.support.v4.view.MenuItemCompat
+android.support.v4.view.MenuItemCompat$BaseMenuVersionImpl
+android.support.v4.view.MenuItemCompat$HoneycombMenuVersionImpl
+android.support.v4.view.MenuItemCompat$MenuVersionImpl
+android.support.v4.view.MenuItemCompatHoneycomb
+android.support.v4.view.MotionEventCompat:
+    public static final int ACTION_MASK
+    public static final int ACTION_POINTER_DOWN
+    public static final int ACTION_POINTER_UP
+    public static final int ACTION_HOVER_MOVE
+    public static final int ACTION_SCROLL
+    public static final int ACTION_POINTER_INDEX_MASK
+    public static final int ACTION_POINTER_INDEX_SHIFT
+    public static final int ACTION_HOVER_ENTER
+    public static final int ACTION_HOVER_EXIT
+    25:75:public MotionEventCompat()
+    174:174:public static int getActionMasked(android.view.MotionEvent)
+android.support.v4.view.MotionEventCompatEclair:
+    24:24:MotionEventCompatEclair()
+android.support.v4.view.PagerAdapter:
+    public static final int POSITION_UNCHANGED
+    public static final int POSITION_NONE
+    78:79:public PagerAdapter()
+    276:277:public void notifyDataSetChanged()
+    297:297:public java.lang.CharSequence getPageTitle(int)
+android.support.v4.view.PagerTabStrip
+android.support.v4.view.PagerTabStrip$1
+android.support.v4.view.PagerTabStrip$2
+android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip$1
+android.support.v4.view.PagerTitleStrip$PageListener
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImpl
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplBase
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplIcs
+android.support.v4.view.PagerTitleStripIcs
+android.support.v4.view.PagerTitleStripIcs$SingleLineAllCapsTransform
+android.support.v4.view.VelocityTrackerCompat:
+    25:51:public VelocityTrackerCompat()
+    91:91:public static float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl:
+    44:44:public float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl:
+    58:58:public float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl:
+    public abstract float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompatHoneycomb:
+    24:24:VelocityTrackerCompatHoneycomb()
+    29:29:public static float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.ViewCompat:
+    public static final int OVER_SCROLL_ALWAYS
+    public static final int OVER_SCROLL_IF_CONTENT_SCROLLS
+    public static final int OVER_SCROLL_NEVER
+    private static final long FAKE_FRAME_TIME
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_AUTO
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_YES
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_NO
+    29:186:public ViewCompat()
+    264:264:public static boolean canScrollVertically(android.view.View,int)
+    293:294:public static void setOverScrollMode(android.view.View,int)
+    330:331:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    363:364:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    399:400:public static void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    414:415:public static void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    426:426:public static boolean hasTransientState(android.view.View)
+    437:438:public static void setHasTransientState(android.view.View,boolean)
+    468:469:public static void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    482:483:public static void postOnAnimation(android.view.View,java.lang.Runnable)
+    499:500:public static void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    515:515:public static int getImportantForAccessibility(android.view.View)
+    531:532:public static void setImportantForAccessibility(android.view.View,int)
+    558:558:public static android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewCompat$BaseViewCompatImpl:
+    89:89:public boolean canScrollVertically(android.view.View,int)
+    96:96:public void setOverScrollMode(android.view.View,int)
+    99:99:public void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    102:102:public void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    105:105:public void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    108:108:public void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    111:111:public boolean hasTransientState(android.view.View)
+    115:115:public void setHasTransientState(android.view.View,boolean)
+    120:121:public void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    123:124:public void postOnAnimation(android.view.View,java.lang.Runnable)
+    126:127:public void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    132:132:public int getImportantForAccessibility(android.view.View)
+    136:136:public void setImportantForAccessibility(android.view.View,int)
+    138:138:public android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewCompat$GBViewCompatImpl:
+    149:150:public void setOverScrollMode(android.view.View,int)
+android.support.v4.view.ViewCompat$ICSViewCompatImpl:
+    166:166:public boolean canScrollVertically(android.view.View,int)
+    170:171:public void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    174:175:public void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    178:179:public void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    182:183:public void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+android.support.v4.view.ViewCompat$JBViewCompatImpl:
+    189:189:public boolean hasTransientState(android.view.View)
+    193:194:public void setHasTransientState(android.view.View,boolean)
+    201:202:public void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    205:206:public void postOnAnimation(android.view.View,java.lang.Runnable)
+    209:210:public void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    213:213:public int getImportantForAccessibility(android.view.View)
+    217:218:public void setImportantForAccessibility(android.view.View,int)
+    221:225:public android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewCompat$ViewCompatImpl:
+    public abstract boolean canScrollVertically(android.view.View,int)
+    public abstract void setOverScrollMode(android.view.View,int)
+    public abstract void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    public abstract void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    public abstract void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    public abstract void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    public abstract boolean hasTransientState(android.view.View)
+    public abstract void setHasTransientState(android.view.View,boolean)
+    public abstract void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    public abstract void postOnAnimation(android.view.View,java.lang.Runnable)
+    public abstract void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    public abstract int getImportantForAccessibility(android.view.View)
+    public abstract void setImportantForAccessibility(android.view.View,int)
+    public abstract android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewCompatGingerbread:
+    21:21:ViewCompatGingerbread()
+    27:28:public static void setOverScrollMode(android.view.View,int)
+android.support.v4.view.ViewCompatHC:
+    21:21:ViewCompatHC()
+android.support.v4.view.ViewCompatICS:
+    27:27:ViewCompatICS()
+    34:34:public static boolean canScrollVertically(android.view.View,int)
+    38:39:public static void setAccessibilityDelegate(android.view.View,java.lang.Object)
+    42:43:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    46:47:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    50:51:public static void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object)
+android.support.v4.view.ViewCompatJB:
+    24:24:public ViewCompatJB()
+    27:27:public static boolean hasTransientState(android.view.View)
+    31:32:public static void setHasTransientState(android.view.View,boolean)
+    40:41:public static void postInvalidateOnAnimation(android.view.View,int,int,int,int)
+    44:45:public static void postOnAnimation(android.view.View,java.lang.Runnable)
+    48:49:public static void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    52:52:public static int getImportantForAccessibility(android.view.View)
+    56:57:public static void setImportantForAccessibility(android.view.View,int)
+    60:60:public static java.lang.Object getAccessibilityNodeProvider(android.view.View)
+android.support.v4.view.ViewConfigurationCompat
+android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompatFroyo
+android.support.v4.view.ViewGroupCompat
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatIcsImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatStubImpl
+android.support.v4.view.ViewGroupCompatIcs
+android.support.v4.view.ViewPager:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    private static final boolean USE_CACHE
+    private static final int DEFAULT_OFFSCREEN_PAGES
+    private static final int MAX_SETTLE_DURATION
+    private static final int MIN_DISTANCE_FOR_FLING
+    private static final int DEFAULT_GUTTER_SIZE
+    private boolean mIgnoreGutter
+    private static final int INVALID_POINTER
+    private static final int CLOSE_ENOUGH
+    private long mFakeDragBeginTime
+    public static final int SCROLL_STATE_IDLE
+    public static final int SCROLL_STATE_DRAGGING
+    public static final int SCROLL_STATE_SETTLING
+    296:298:public ViewPager(android.content.Context)
+    301:303:public ViewPager(android.content.Context,android.util.AttributeSet)
+    306:330:void initViewPager()
+    514:516:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+    638:639:void smoothScrollTo(int,int)
+    2025:2041:public boolean beginFakeDrag()
+    2051:2072:public void endFakeDrag()
+    2082:2120:public void fakeDragBy(float)
+    2132:2132:public boolean isFakeDragging()
+    82:82:static synthetic android.support.v4.view.PagerAdapter access$100(android.support.v4.view.ViewPager)
+    82:82:static synthetic int access$200(android.support.v4.view.ViewPager)
+android.support.v4.view.ViewPager$MyAccessibilityDelegate
+android.support.v4.view.ViewPager$SimpleOnPageChangeListener
+android.support.v4.view.accessibility.AccessibilityEventCompat
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventIcsImpl
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventStubImpl
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventVersionImpl
+android.support.v4.view.accessibility.AccessibilityEventCompatIcs
+android.support.v4.view.accessibility.AccessibilityManagerCompat
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerIcsImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerIcsImpl$1
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerStubImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerVersionImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs$1
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoIcsImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoStubImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatIcs
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatJellyBean
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl$1
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderStubImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$1
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge
+android.support.v4.view.accessibility.AccessibilityRecordCompat
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordStubImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompatIcs
+android.support.v4.view.accessibility.AccessibilityRecordCompatIcsMr1
+android.support.v4.view.accessibility.AccessibilityRecordCompatJellyBean
+android.support.v4.widget.CursorAdapter
+android.support.v4.widget.CursorAdapter$1
+android.support.v4.widget.CursorAdapter$ChangeObserver
+android.support.v4.widget.CursorAdapter$MyDataSetObserver
+android.support.v4.widget.CursorFilter
+android.support.v4.widget.CursorFilter$CursorFilterClient
+android.support.v4.widget.EdgeEffectCompat:
+    132:134:public EdgeEffectCompat(android.content.Context)
+    204:204:public boolean onAbsorb(int)
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl:
+    60:60:public java.lang.Object newEdgeEffect(android.content.Context)
+    82:82:public boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl:
+    92:92:public java.lang.Object newEdgeEffect(android.content.Context)
+    116:116:public boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl:
+    public abstract java.lang.Object newEdgeEffect(android.content.Context)
+    public abstract boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompatIcs:
+    28:28:EdgeEffectCompatIcs()
+    30:30:public static java.lang.Object newEdgeEffect(android.content.Context)
+    57:58:public static boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.ResourceCursorAdapter
+android.support.v4.widget.ScrollerCompat
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs
+android.support.v4.widget.ScrollerCompatIcs
+android.support.v4.widget.SearchViewCompat
+android.support.v4.widget.SearchViewCompat$OnQueryTextListenerCompat
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl$1
+android.support.v4.widget.SearchViewCompat$SearchViewCompatImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatStubImpl
+android.support.v4.widget.SearchViewCompatHoneycomb
+android.support.v4.widget.SearchViewCompatHoneycomb$1
+android.support.v4.widget.SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge
+android.support.v4.widget.SimpleCursorAdapter
+android.support.v4.widget.SimpleCursorAdapter$CursorToStringConverter
+android.support.v4.widget.SimpleCursorAdapter$ViewBinder
+com.google.android.gcm.GCMBaseIntentService:
+    public static final java.lang.String TAG
+    private static final java.lang.String WAKELOCK_KEY
+    private static final java.lang.String EXTRA_TOKEN
+com.google.android.gcm.GCMBroadcastReceiver:
+    private static final java.lang.String TAG
+com.google.android.gcm.GCMConstants
+com.google.android.gcm.GCMRegistrar:
+    public static final long DEFAULT_ON_SERVER_LIFESPAN_MS
+    private static final java.lang.String TAG
+    private static final java.lang.String BACKOFF_MS
+    private static final java.lang.String GSF_PACKAGE
+    private static final java.lang.String PREFERENCES
+    private static final int DEFAULT_BACKOFF_MS
+    private static final java.lang.String PROPERTY_REG_ID
+    private static final java.lang.String PROPERTY_APP_VERSION
+    private static final java.lang.String PROPERTY_ON_SERVER
+    private static final java.lang.String PROPERTY_ON_SERVER_EXPIRATION_TIME
+    private static final java.lang.String PROPERTY_ON_SERVER_LIFESPAN
+    89:101:public static void checkDevice(android.content.Context)
+    129:173:public static void checkManifest(android.content.Context)
+    177:200:private static void checkReceiver(android.content.Context,java.util.Set,java.lang.String)
+    217:219:public static varargs void register(android.content.Context,java.lang.String[])
+    252:254:public static void unregister(android.content.Context)
+    264:269:public static synchronized void onDestroy(android.content.Context)
+    385:395:public static void setRegisteredOnServer(android.content.Context,boolean)
+    407:419:public static boolean isRegisteredOnServer(android.content.Context)
+    430:433:public static long getRegisterOnServerLifespan(android.content.Context)
+    442:446:public static void setRegisterOnServerLifespan(android.content.Context,long)
+    505:506:private GCMRegistrar()
+com.inhuasoft.smart.client.AudioCallFragment$SwipeGestureDetector
+com.inhuasoft.smart.client.AudioCallFragment$SwipeListener
+com.inhuasoft.smart.client.AudioCall_New_Fragment:
+    80:87:private void unregisterCallDurationTimer(android.view.View)
+    198:218:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    64:64:static synthetic void access$0(com.inhuasoft.smart.client.AudioCall_New_Fragment,android.view.View,org.linphone.core.LinphoneCall)
+    79:79:static synthetic void access$1(com.inhuasoft.smart.client.AudioCall_New_Fragment,android.view.View)
+com.inhuasoft.smart.client.AudioCall_New_Fragment$1
+com.inhuasoft.smart.client.AudioCall_New_Fragment$2
+com.inhuasoft.smart.client.AudioCall_New_Fragment$SwipeGestureDetector
+com.inhuasoft.smart.client.AudioCall_New_Fragment$SwipeListener
+com.inhuasoft.smart.client.BandwidthManager:
+    public static final int HIGH_RESOLUTION
+    public static final int LOW_RESOLUTION
+    public static final int LOW_BANDWIDTH
+    33:33:public int getCurrentProfile()
+com.inhuasoft.smart.client.BluetoothManager:
+    78:87:public void initBluetooth()
+    130:175:public boolean routeAudioToBluetooth()
+    179:179:public boolean isUsingBluetoothAudioRoute()
+com.inhuasoft.smart.client.BuildConfig
+com.inhuasoft.smart.client.CallManager:
+    112:121:void reinvite()
+com.inhuasoft.smart.client.ChatFragment:
+    private static final int ADD_PHOTO
+    private static final int MENU_DELETE_MESSAGE
+    private static final int MENU_SAVE_PICTURE
+    private static final int MENU_PICTURE_SMALL
+    private static final int MENU_PICTURE_MEDIUM
+    private static final int MENU_PICTURE_LARGE
+    private static final int MENU_PICTURE_REAL
+    private static final int MENU_COPY_TEXT
+    private static final int MENU_RESEND_MESSAGE
+    private static final int COMPRESSOR_QUALITY
+    private static final int SIZE_SMALL
+    private static final int SIZE_MEDIUM
+    private static final int SIZE_LARGE
+    private static final int MESSAGES_STEP
+    743:769:public void onMessageReceived(int,org.linphone.core.LinphoneAddress,org.linphone.core.LinphoneChatMessage)
+    773:808:public synchronized void onLinphoneChatMessageStateChanged(org.linphone.core.LinphoneChatMessage,org.linphone.core.LinphoneChatMessage$State)
+    811:811:public java.lang.String getSipUri()
+    1162:1170:public void onComposingReceived(org.linphone.core.LinphoneChatRoom)
+    371:371:static synthetic com.inhuasoft.smart.client.ui.BubbleChat access$17(com.inhuasoft.smart.client.ChatFragment,int,java.lang.String,long,boolean,org.linphone.core.LinphoneChatMessage$State,android.widget.RelativeLayout)
+    396:396:static synthetic com.inhuasoft.smart.client.ui.BubbleChat access$18(com.inhuasoft.smart.client.ChatFragment,int,android.graphics.Bitmap,long,boolean,org.linphone.core.LinphoneChatMessage$State,android.widget.RelativeLayout,java.lang.String)
+    110:110:static synthetic java.lang.String access$19(com.inhuasoft.smart.client.ChatFragment)
+    120:120:static synthetic java.util.HashMap access$20(com.inhuasoft.smart.client.ChatFragment)
+    119:119:static synthetic java.util.List access$21(com.inhuasoft.smart.client.ChatFragment)
+    113:113:static synthetic android.widget.TextView access$26(com.inhuasoft.smart.client.ChatFragment)
+com.inhuasoft.smart.client.ChatFragment$10
+com.inhuasoft.smart.client.ChatFragment$11
+com.inhuasoft.smart.client.ChatFragment$12
+com.inhuasoft.smart.client.ChatFragment$15
+com.inhuasoft.smart.client.ChatMessage:
+    70:71:public void setMessage(java.lang.String)
+    78:79:public void setTimestamp(java.lang.String)
+    86:87:public void setIncoming(boolean)
+    90:91:public void setStatus(int)
+    102:102:public boolean isRead()
+com.inhuasoft.smart.client.ChatStorage:
+    private static final int INCOMING
+    private static final int OUTGOING
+    private static final int READ
+    private static final int NOT_READ
+    private static final java.lang.String TABLE_NAME
+    private static final java.lang.String DRAFT_TABLE_NAME
+    99:120:public void updateMessageStatus(java.lang.String,java.lang.String,int)
+    123:131:public void updateMessageStatus(java.lang.String,int,int)
+    417:422:public void markMessageAsRead(int)
+    425:428:public void markConversationAsRead(org.linphone.core.LinphoneChatRoom)
+com.inhuasoft.smart.client.ChatStorage$ChatHelper:
+    private static final int DATABASE_VERSION
+    private static final java.lang.String DATABASE_NAME
+com.inhuasoft.smart.client.Contact:
+    private static final long serialVersionUID
+    53:58:public Contact(java.lang.String,java.lang.String,android.net.Uri)
+com.inhuasoft.smart.client.ContactHelper:
+    45:45:public java.lang.String getDisplayName()
+    71:75:public static android.content.Intent prepareEditContactIntent(int)
+com.inhuasoft.smart.client.ContactPicked
+com.inhuasoft.smart.client.ContactsFragment:
+    73:73:static final boolean isInstanciated()
+    77:77:public static final com.inhuasoft.smart.client.ContactsFragment instance()
+com.inhuasoft.smart.client.CustomDialog:
+    30:30:public CustomDialog()
+com.inhuasoft.smart.client.DialerFragment:
+    public boolean mVisible
+    132:132:public static com.inhuasoft.smart.client.DialerFragment instance()
+com.inhuasoft.smart.client.EditContactFragment$NewOrUpdatedNumberOrAddress:
+    483:487:public EditContactFragment$NewOrUpdatedNumberOrAddress(com.inhuasoft.smart.client.EditContactFragment)
+com.inhuasoft.smart.client.FragmentsAvailable:
+    40:40:public boolean shouldAddToBackStack()
+com.inhuasoft.smart.client.InCallActivity:
+    private static final int SECONDS_BEFORE_HIDING_CONTROLS
+    private static final int SECONDS_BEFORE_DENYING_CALL_UPDATE
+    private boolean isAnimationDisabled
+    private android.os.CountDownTimer timer
+    private com.inhuasoft.smart.client.InCallActivity$AcceptCallUpdateDialog callUpdateDialog
+    private android.widget.TableLayout callsList
+    private android.view.ViewGroup container
+    1017:1041:private void acceptCallUpdate(boolean)
+    1049:1129:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    1132:1135:private void showAcceptCallUpdateDialog()
+    1147:1147:public void onCallEncryptionChanged(org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    1200:1212:private void unbindDrawables(android.view.View)
+    1273:1284:private void displayConferenceHeader()
+    1287:1325:private void displayCall(android.content.res.Resources,org.linphone.core.LinphoneCall,int)
+    1328:1342:private void setContactName(android.widget.LinearLayout,org.linphone.core.LinphoneAddress,java.lang.String,android.content.res.Resources)
+    1346:1369:private boolean displayCallStatusIconAndReturnCallPaused(android.widget.LinearLayout,org.linphone.core.LinphoneCall)
+    1373:1378:private void displayOrHideContactPicture(android.widget.LinearLayout,android.net.Uri,boolean)
+    1382:1390:private void setRowBackground(android.widget.LinearLayout,int)
+    1393:1405:private void registerCallDurationTimer(android.view.View,org.linphone.core.LinphoneCall)
+    1408:1431:public void refreshCallList(android.content.res.Resources)
+    1016:1016:static synthetic void access$0(com.inhuasoft.smart.client.InCallActivity,boolean)
+    101:101:static synthetic void access$1(com.inhuasoft.smart.client.InCallActivity,com.inhuasoft.smart.client.InCallActivity$AcceptCallUpdateDialog)
+    101:101:static synthetic com.inhuasoft.smart.client.InCallActivity$AcceptCallUpdateDialog access$2(com.inhuasoft.smart.client.InCallActivity)
+    1131:1131:static synthetic void access$5(com.inhuasoft.smart.client.InCallActivity)
+    100:100:static synthetic void access$6(com.inhuasoft.smart.client.InCallActivity,android.os.CountDownTimer)
+    104:104:static synthetic android.widget.TableLayout access$7(com.inhuasoft.smart.client.InCallActivity)
+com.inhuasoft.smart.client.InCallActivity$3
+com.inhuasoft.smart.client.InCallActivity$4
+com.inhuasoft.smart.client.InCallActivity$4$1
+com.inhuasoft.smart.client.InCallActivity$5
+com.inhuasoft.smart.client.InCallActivity$6
+com.inhuasoft.smart.client.InCallActivity$AcceptCallUpdateDialog
+com.inhuasoft.smart.client.InCallActivity$AcceptCallUpdateDialog$1
+com.inhuasoft.smart.client.InCallActivity$AcceptCallUpdateDialog$2
+com.inhuasoft.smart.client.InCallActivityBakup
+com.inhuasoft.smart.client.InCallActivityBakup$1
+com.inhuasoft.smart.client.InCallActivityBakup$10
+com.inhuasoft.smart.client.InCallActivityBakup$10$1
+com.inhuasoft.smart.client.InCallActivityBakup$11
+com.inhuasoft.smart.client.InCallActivityBakup$12
+com.inhuasoft.smart.client.InCallActivityBakup$13
+com.inhuasoft.smart.client.InCallActivityBakup$13$1
+com.inhuasoft.smart.client.InCallActivityBakup$14
+com.inhuasoft.smart.client.InCallActivityBakup$15
+com.inhuasoft.smart.client.InCallActivityBakup$16
+com.inhuasoft.smart.client.InCallActivityBakup$16$1
+com.inhuasoft.smart.client.InCallActivityBakup$17
+com.inhuasoft.smart.client.InCallActivityBakup$18
+com.inhuasoft.smart.client.InCallActivityBakup$19
+com.inhuasoft.smart.client.InCallActivityBakup$2
+com.inhuasoft.smart.client.InCallActivityBakup$3
+com.inhuasoft.smart.client.InCallActivityBakup$4
+com.inhuasoft.smart.client.InCallActivityBakup$5
+com.inhuasoft.smart.client.InCallActivityBakup$6
+com.inhuasoft.smart.client.InCallActivityBakup$6$1
+com.inhuasoft.smart.client.InCallActivityBakup$7
+com.inhuasoft.smart.client.InCallActivityBakup$8
+com.inhuasoft.smart.client.InCallActivityBakup$9
+com.inhuasoft.smart.client.InCallActivityBakup$AcceptCallUpdateDialog
+com.inhuasoft.smart.client.InCallActivityBakup$AcceptCallUpdateDialog$1
+com.inhuasoft.smart.client.InCallActivityBakup$AcceptCallUpdateDialog$2
+com.inhuasoft.smart.client.IncomingCallActivity:
+    149:156:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+com.inhuasoft.smart.client.LinphoneActivity:
+    public static final java.lang.String PREF_FIRST_LAUNCH
+    private static final int SETTINGS_ACTIVITY
+    private static final int FIRST_LOGIN_ACTIVITY
+    private static final int REMOTE_PROVISIONING_LOGIN_ACTIVITY
+    private static final int CALL_ACTIVITY
+    private com.inhuasoft.smart.client.LinphoneActivity$AcceptNewFriendDialog acceptNewFriendDialog
+    700:703:public void applyConfigChangesIfNeeded()
+    738:748:public void onMessageReceived(org.linphone.core.LinphoneAddress,org.linphone.core.LinphoneChatMessage,int)
+    765:766:public void onMessageStateChanged(java.lang.String,java.lang.String,int)
+    769:770:public void onImageMessageStateChanged(java.lang.String,int,int)
+    774:781:public void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState)
+    826:848:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    884:887:public void setAddressAndGoToDialer(java.lang.String)
+    891:892:public void goToDialer()
+    960:960:public void showPreferenceErrorDialog(java.lang.String)
+    988:1012:public void onNewSubscriptionRequestReceived(org.linphone.core.LinphoneFriend,java.lang.String)
+    1015:1026:private com.inhuasoft.smart.client.Contact findContactWithSipAddress(java.lang.String)
+    1030:1033:public void onNotifyPresenceReceived(org.linphone.core.LinphoneFriend)
+    1050:1054:private void acceptNewFriend(com.inhuasoft.smart.client.Contact,java.lang.String,boolean)
+    1180:1180:public com.inhuasoft.smart.client.FragmentsAvailable getCurrentFragment()
+    1049:1049:static synthetic void access$2(com.inhuasoft.smart.client.LinphoneActivity,com.inhuasoft.smart.client.Contact,java.lang.String,boolean)
+com.inhuasoft.smart.client.LinphoneActivity$AcceptNewFriendDialog
+com.inhuasoft.smart.client.LinphoneActivity$AcceptNewFriendDialog$1
+com.inhuasoft.smart.client.LinphoneActivity$AcceptNewFriendDialog$2
+com.inhuasoft.smart.client.LinphoneException
+com.inhuasoft.smart.client.LinphoneManager:
+    private java.lang.String lastLcStatusMessage
+    private boolean mAudioFocused
+    private android.os.PowerManager$WakeLock mIncallWakeLock
+    private static final int LINPHONE_VOLUME_STREAM
+    private static final int dbStep
+    private org.linphone.core.LinphoneCall ringingCall
+    private android.media.MediaPlayer mRingerPlayer
+    private com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnDTMFReceivedListener dtmfReceivedListener
+    private boolean isRinging
+    295:295:public java.lang.String getLPConfigXsdPath()
+    352:361:private void resetCameraFromPreferences()
+    379:384:public boolean toggleEnableCamera()
+    396:399:public void sendStaticImage(boolean)
+    498:550:private synchronized void initLiblinphone()
+    584:587:public boolean detectVideoCodec(java.lang.String)
+    591:594:public boolean detectAudioCodec(java.lang.String)
+    680:681:public void addConnectivityChangedListener(com.inhuasoft.smart.client.LinphoneSimpleListener$ConnectivityChangedListener)
+    693:693:public void displayWarning(org.linphone.core.LinphoneCore,java.lang.String)
+    694:694:public void authInfoRequested(org.linphone.core.LinphoneCore,java.lang.String,java.lang.String,java.lang.String)
+    695:695:public void byeReceived(org.linphone.core.LinphoneCore,java.lang.String)
+    696:696:public void displayMessage(org.linphone.core.LinphoneCore,java.lang.String)
+    697:697:public void show(org.linphone.core.LinphoneCore)
+    700:703:public void newSubscriptionRequest(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend,java.lang.String)
+    706:709:public void notifyPresenceReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend)
+    714:714:public void textReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneAddress,java.lang.String)
+    721:720:public void dtmfReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,int)
+    725:726:public void setOnDTMFReceivedListener(com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnDTMFReceivedListener)
+    730:756:public void messageReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneChatMessage)
+    759:759:public java.lang.String getLastLcStatusMessage()
+    766:765:public void displayStatus(org.linphone.core.LinphoneCore,java.lang.String)
+    787:786:public void globalState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    792:791:public void registrationState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneProxyConfig,org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    940:939:public void callState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    942:942:public void callStatsUpdated(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallStats)
+    946:947:public void callEncryptionChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    951:953:public void ecCalibrationStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$EcCalibratorStatus,int,java.lang.Object)
+    979:980:public void disableRinging()
+    983:988:private void requestAudioFocus()
+    991:1032:private synchronized void startRinging()
+    1035:1053:private synchronized void stopRinging()
+    1057:1069:public static java.lang.String extractADisplayName(android.content.res.Resources,org.linphone.core.LinphoneAddress)
+    1097:1102:public boolean acceptCall(org.linphone.core.LinphoneCall)
+    1116:1116:public static java.lang.String extractIncomingRemoteName(android.content.res.Resources,org.linphone.core.LinphoneAddress)
+    1300:1307:public synchronized org.linphone.core.LinphoneCall getPendingIncomingCall()
+    1336:1336:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneAddress,byte[])
+    1341:1341:public void transferState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State)
+    1349:1347:public void infoReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneInfoMessage)
+    1354:1353:public void subscriptionStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.SubscriptionState)
+    1360:1359:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,java.lang.String,org.linphone.core.LinphoneContent)
+    1365:1364:public void publishStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.PublishState)
+    1376:1375:public void isComposingReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom)
+    1393:1389:public void configuringStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$RemoteProvisioningState,java.lang.String)
+    1229:1229:static synthetic java.util.List access$2(com.inhuasoft.smart.client.LinphoneManager,java.lang.Class)
+    497:497:static synthetic void access$4(com.inhuasoft.smart.client.LinphoneManager)
+com.inhuasoft.smart.client.LinphoneManager$3
+com.inhuasoft.smart.client.LinphoneManager$4
+com.inhuasoft.smart.client.LinphoneManager$EcCalibrationListener:
+    public abstract void onEcCalibrationStatus(org.linphone.core.LinphoneCore$EcCalibratorStatus,int)
+com.inhuasoft.smart.client.LinphoneManager$LinphoneConfigException
+com.inhuasoft.smart.client.LinphoneManager$ListenerDispatcher:
+    1246:1252:public void onCallEncryptionChanged(org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    1255:1264:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    1267:1268:public void onDisplayStatus(java.lang.String)
+    1271:1272:public void onGlobalStateChanged(org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    1276:1280:public void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    1283:1284:public void tryingNewOutgoingCallButAlreadyInCall()
+com.inhuasoft.smart.client.LinphoneManager$NewOutgoingCallUiListener
+com.inhuasoft.smart.client.LinphonePreferences:
+    private static final int LINPHONE_CORE_RANDOM_PORT
+    80:81:public void removePreviousVersionAuthInfoRemoval()
+    93:96:public java.lang.String getRingtone(java.lang.String)
+    117:117:public java.lang.String getUserSip()
+    125:125:public java.lang.String getUser()
+    129:130:public void setUser(java.lang.String)
+    150:152:public void setRingtone(java.lang.String)
+    155:155:public boolean shouldAutomaticallyAcceptFriendsRequests()
+    569:572:public void setAccountContactParameters(int,java.lang.String)
+com.inhuasoft.smart.client.LinphonePreferences$AccountBuilder:
+    234:235:public com.inhuasoft.smart.client.LinphonePreferences$AccountBuilder setDisplayName(java.lang.String)
+    269:270:public com.inhuasoft.smart.client.LinphonePreferences$AccountBuilder setUserId(java.lang.String)
+    284:285:public com.inhuasoft.smart.client.LinphonePreferences$AccountBuilder setEnabled(boolean)
+    289:290:public com.inhuasoft.smart.client.LinphonePreferences$AccountBuilder setNoDefault(boolean)
+com.inhuasoft.smart.client.LinphoneService:
+    public static final java.lang.String START_LINPHONE_LOGS
+    public static final int IC_LEVEL_ORANGE
+    public static final int IC_LEVEL_OFFLINE
+    private static final int NOTIF_ID
+    private static final int INCALL_NOTIF_ID
+    private static final int MESSAGE_NOTIF_ID
+    private static final int CUSTOM_NOTIF_ID
+    private android.app.Notification mMsgNotif
+    private android.app.Notification mCustomNotif
+    private boolean mDisableRegistrationStatus
+    124:124:public int getMessageNotifCount()
+    280:294:public void addNotification(android.content.Intent,int,java.lang.String,java.lang.String)
+    297:299:public void removeCustomNotification()
+    302:334:public void displayMessageNotification(java.lang.String,java.lang.String,java.lang.String)
+    435:436:public void disableNotificationsAutomaticRegistrationStatusContent()
+    439:455:public synchronized void sendNotification(int,int)
+    494:494:public void onDisplayStatus(java.lang.String)
+    497:500:public void onGlobalStateChanged(org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    508:529:public void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    548:551:protected void onIncomingReceived()
+    554:593:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    596:596:public void tryingNewOutgoingCallButAlreadyInCall()
+    606:606:public void onCallEncryptionChanged(org.linphone.core.LinphoneCall,boolean,java.lang.String)
+com.inhuasoft.smart.client.LinphoneService$2
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnCallEncryptionChangedListener:
+    public abstract void onCallEncryptionChanged(org.linphone.core.LinphoneCall,boolean,java.lang.String)
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnCallStateChangedListener:
+    public abstract void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnComposingReceivedListener:
+    public abstract void onComposingReceived(org.linphone.core.LinphoneChatRoom)
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnDTMFReceivedListener
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnGlobalStateChangedListener:
+    public abstract void onGlobalStateChanged(org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnMessageReceivedListener:
+    public abstract void onMessageReceived(org.linphone.core.LinphoneAddress,org.linphone.core.LinphoneChatMessage,int)
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnRegistrationStateChangedListener:
+    public abstract void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState)
+com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneServiceListener:
+    public abstract void tryingNewOutgoingCallButAlreadyInCall()
+    public abstract void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    public abstract void onDisplayStatus(java.lang.String)
+com.inhuasoft.smart.client.LinphoneUtils:
+    75:75:private LinphoneUtils()
+    185:191:public static final java.util.List getLinphoneCallsNotInConf(org.linphone.core.LinphoneCore)
+    195:201:public static final java.util.List getLinphoneCallsInConf(org.linphone.core.LinphoneCore)
+    210:215:public static final boolean hasExistingResumeableCall(org.linphone.core.LinphoneCore)
+    228:228:public static final java.util.List getRunningOrPausedCalls(org.linphone.core.LinphoneCore)
+    235:237:public static final int countConferenceCalls(org.linphone.core.LinphoneCore)
+    241:241:public static int countVirtualCalls(org.linphone.core.LinphoneCore)
+    244:244:public static int countNonConferenceCalls(org.linphone.core.LinphoneCore)
+    248:249:public static void setVisibility(android.view.View,int,boolean)
+    251:252:public static void setVisibility(android.view.View,boolean)
+    254:257:public static void enableView(android.view.View,int,android.view.View$OnClickListener,boolean)
+    343:347:public static void clearLogs()
+com.inhuasoft.smart.client.LoginActivity:
+    private static final int Admin_Login_Action
+    private static final int Admin_Login_Fail
+    private static final int Admin_Login_Success
+    private static final int Sip_Add_User_Action
+    private static final int Sip_Add_User_Fail
+    private static final int Sip_Add_User_Success
+    private static final int Sip_Add_Device_Action
+    private static final int Sip_Add_Device_Fail
+    private static final int Sip_Add_Device_Success
+    private static final int Device_Reg_Action
+    private static final int Device_Reg_Success
+    private static final int Device_Reg_Fail
+    private static final int User_Reg_Action
+    private static final int User_Reg_Success
+    private static final int User_Reg_Fail
+    private static final int Bind_User_Device_Action
+    private static final int Bind_User_Device_Success
+    private static final int Bind_User_Device_Fail
+    private static final int GetUserByDevice_Action
+    private static final int GetUserByDevice_Success
+    private static final int GetUserByDevice_Fail
+    private static final int Show_Reg_UI
+    private static final int Show_Login_UI
+    private static final int StartMain
+    private static final int User_Login_Action
+    private static final int User_Login_Success
+    private static final int User_Login_Fail
+com.inhuasoft.smart.client.MD5:
+    5:5:public MD5()
+com.inhuasoft.smart.client.MainActivity:
+    private static final int MENU_EXIT
+    private static final int MENU_SETTINGS
+    private static final int MENU_ORGIN
+    private static final int CALL_ACTIVITY
+    68:68:static final boolean isInstanciated()
+    72:74:public static final com.inhuasoft.smart.client.MainActivity instance()
+    245:267:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    333:349:public void displayCustomToast(java.lang.String,int)
+com.inhuasoft.smart.client.MainActivity$1
+com.inhuasoft.smart.client.Manifest
+com.inhuasoft.smart.client.Manifest$permission
+com.inhuasoft.smart.client.OpenGLESDisplay
+com.inhuasoft.smart.client.PreferencesMigrator
+com.inhuasoft.smart.client.R:
+    10:10:public R()
+com.inhuasoft.smart.client.R$anim
+com.inhuasoft.smart.client.R$array
+com.inhuasoft.smart.client.R$attr
+com.inhuasoft.smart.client.R$bool
+com.inhuasoft.smart.client.R$color
+com.inhuasoft.smart.client.R$drawable
+com.inhuasoft.smart.client.R$id
+com.inhuasoft.smart.client.R$layout
+com.inhuasoft.smart.client.R$raw
+com.inhuasoft.smart.client.R$string
+com.inhuasoft.smart.client.R$style
+com.inhuasoft.smart.client.R$styleable:
+    1691:1691:public R$styleable()
+com.inhuasoft.smart.client.R$xml
+com.inhuasoft.smart.client.RegexUtils:
+    9:9:public RegexUtils()
+    17:18:public static boolean checkEmail(java.lang.String)
+    27:28:public static boolean checkIdCard(java.lang.String)
+    41:42:public static boolean checkMobile(java.lang.String)
+    56:57:public static boolean checkPhone(java.lang.String)
+    66:67:public static boolean checkDigit(java.lang.String)
+    76:77:public static boolean checkDecimals(java.lang.String)
+    86:87:public static boolean checkBlankSpace(java.lang.String)
+    96:97:public static boolean checkChinese(java.lang.String)
+    106:107:public static boolean checkBirthday(java.lang.String)
+    116:117:public static boolean checkURL(java.lang.String)
+    126:127:public static boolean checkPostcode(java.lang.String)
+    136:137:public static boolean checkIpAddress(java.lang.String)
+com.inhuasoft.smart.client.ScreenHome:
+    public static final int HOME_INTENT_FLAG
+    public static final int VIDEO_INTENT_FLAG
+    public static final int SWITCH_INTENT_FLAG
+    public static final int CONTROL_INTENT_FLAG
+    public static final int MORE_INTENT_FLAG
+    public static final int DIAL_INTENT_FLAG
+    public static final int VDIAL_INTENT_FLAG
+    public static final int TWOWAY_INTENT_FLAG
+    public static final int PHOTO_INTENT_FLAG
+    public static final int RECORD_INTENT_FLAG
+    public static final int AUDIO_INTENT_FLAG
+    private static final int MENU_EXIT
+    private static final int MENU_SETTINGS
+    private static final int MENU_ORGIN
+    private static final int CALL_ACTIVITY
+    private boolean isTransferAllowed
+    private boolean isAnimationDisabled
+    236:261:private void switchVideo(boolean,boolean)
+    267:269:private void showAudioView()
+    272:274:private void showVideoView()
+    389:434:public void onCallStateChanged(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    458:458:private int getTextColor(int)
+    542:546:private synchronized void startOrientationSensor()
+    549:565:public void displayCustomToast(java.lang.String,int)
+    601:601:public void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState)
+    611:611:public void onMessageReceived(org.linphone.core.LinphoneAddress,org.linphone.core.LinphoneChatMessage,int)
+    99:99:static synthetic int access$0(com.inhuasoft.smart.client.ScreenHome)
+    99:99:static synthetic void access$1(com.inhuasoft.smart.client.ScreenHome,int)
+    264:264:static synthetic void access$2(com.inhuasoft.smart.client.ScreenHome)
+    271:271:static synthetic void access$3(com.inhuasoft.smart.client.ScreenHome)
+com.inhuasoft.smart.client.ScreenHome$1
+com.inhuasoft.smart.client.ScreenHome$2
+com.inhuasoft.smart.client.ScreenHome$3
+com.inhuasoft.smart.client.ScreenHome$LocalOrientationEventListener
+com.inhuasoft.smart.client.SettingsFragment:
+    private static final int WIZARD_INTENT
+    834:851:public void onEcCalibrationStatus(org.linphone.core.LinphoneCore$EcCalibratorStatus,int)
+com.inhuasoft.smart.client.SettingsFragment$36
+com.inhuasoft.smart.client.StatusFragment:
+    137:138:public void openOrCloseStatusBar()
+com.inhuasoft.smart.client.TwowayVideoFragment:
+    148:162:public void switchCamera()
+com.inhuasoft.smart.client.UserLoginActivity:
+    android.widget.TextView txtMsginfo
+    android.widget.CheckBox chkMsginfo
+    private static final int StartMain
+    private static final int User_Login_Action
+    private static final int User_Login_Success
+    private static final int User_Login_Fail
+    148:148:public static java.lang.String getDeviceNo()
+    332:335:public void SetLoginUI()
+com.inhuasoft.smart.client.VideoCallFragment:
+    60:60:static synthetic com.inhuasoft.smart.client.InCallActivity access$5(com.inhuasoft.smart.client.VideoCallFragment)
+com.inhuasoft.smart.client.compatibility.ApiEightPlus:
+    36:36:public ApiEightPlus()
+    41:58:public static void initPushNotificationService(android.content.Context)
+com.inhuasoft.smart.client.compatibility.ApiElevenPlus:
+    46:46:public ApiElevenPlus()
+    53:73:public static android.app.Notification createMessageNotification(android.content.Context,int,java.lang.String,java.lang.String,android.graphics.Bitmap,android.app.PendingIntent)
+    125:126:public static void setAudioManagerInCallMode(android.media.AudioManager)
+com.inhuasoft.smart.client.compatibility.ApiFivePlus:
+    63:63:public ApiFivePlus()
+    65:66:public static void overridePendingTransition(android.app.Activity,int,int)
+    88:96:public static android.content.Intent prepareEditContactIntentWithSipAddress(int,java.lang.String)
+    155:160:private static android.database.Cursor getSIPContactCursor(android.content.ContentResolver,java.lang.String)
+    244:257:public static android.net.Uri findUriPictureOfContactAndSetDisplayName(org.linphone.core.LinphoneAddress,android.content.ContentResolver)
+    273:285:public static android.app.Notification createMessageNotification(android.content.Context,java.lang.String,java.lang.String,android.app.PendingIntent)
+    302:303:public static void setPreferenceChecked(android.preference.Preference,boolean)
+    306:306:public static boolean isPreferenceChecked(android.preference.Preference)
+    369:369:public static void setAudioManagerInCallMode(android.media.AudioManager)
+com.inhuasoft.smart.client.compatibility.ApiFourteenPlus:
+    32:32:public ApiFourteenPlus()
+    35:36:public static void setPreferenceChecked(android.preference.Preference,boolean)
+    39:39:public static boolean isPreferenceChecked(android.preference.Preference)
+com.inhuasoft.smart.client.compatibility.ApiNinePlus:
+    44:44:public ApiNinePlus()
+    158:162:private static android.database.Cursor getSIPContactCursor(android.content.ContentResolver,java.lang.String)
+    166:179:public static android.net.Uri findUriPictureOfContactAndSetDisplayName(org.linphone.core.LinphoneAddress,android.content.ContentResolver)
+com.inhuasoft.smart.client.compatibility.ApiSixteenPlus:
+    34:34:public ApiSixteenPlus()
+    40:61:public static android.app.Notification createMessageNotification(android.content.Context,int,java.lang.String,java.lang.String,android.graphics.Bitmap,android.app.PendingIntent)
+com.inhuasoft.smart.client.compatibility.Compatibility:
+    46:46:public Compatibility()
+    48:51:public static void overridePendingTransition(android.app.Activity,int,int)
+    138:141:public static android.net.Uri findUriPictureOfContactAndSetDisplayName(org.linphone.core.LinphoneAddress,android.content.ContentResolver)
+    146:161:public static android.app.Notification createMessageNotification(android.content.Context,int,java.lang.String,java.lang.String,android.graphics.Bitmap,android.app.PendingIntent)
+    207:212:public static void setPreferenceChecked(android.preference.Preference,boolean)
+    215:218:public static boolean isPreferenceChecked(android.preference.Preference)
+    223:226:public static void initPushNotificationService(android.content.Context)
+    292:297:public static void setAudioManagerInCallMode(android.media.AudioManager)
+com.inhuasoft.smart.client.setup.EchoCancellerCalibrationFragment:
+    68:78:public void onEcCalibrationStatus(org.linphone.core.LinphoneCore$EcCalibratorStatus,int)
+    86:112:private void sendEcCalibrationResult(org.linphone.core.LinphoneCore$EcCalibratorStatus,int)
+    49:49:static synthetic android.os.Handler access$0(com.inhuasoft.smart.client.setup.EchoCancellerCalibrationFragment)
+com.inhuasoft.smart.client.setup.EchoCancellerCalibrationFragment$1
+com.inhuasoft.smart.client.setup.EchoCancellerCalibrationFragment$1$1
+com.inhuasoft.smart.client.setup.SetupActivity:
+    359:360:public void isEchoCalibrationFinished()
+    200:200:static synthetic com.inhuasoft.smart.client.LinphoneSimpleListener$LinphoneOnRegistrationStateChangedListener access$0(com.inhuasoft.smart.client.setup.SetupActivity)
+    55:55:static synthetic android.os.Handler access$1(com.inhuasoft.smart.client.setup.SetupActivity)
+    171:171:static synthetic void access$2(com.inhuasoft.smart.client.setup.SetupActivity,boolean)
+com.inhuasoft.smart.client.setup.SetupActivity$1:
+    202:220:public void onRegistrationStateChanged(org.linphone.core.LinphoneCore$RegistrationState)
+    200:200:static synthetic com.inhuasoft.smart.client.setup.SetupActivity access$0(com.inhuasoft.smart.client.setup.SetupActivity$1)
+com.inhuasoft.smart.client.setup.SetupActivity$1$1
+com.inhuasoft.smart.client.setup.SetupActivity$1$2
+com.inhuasoft.smart.client.tutorials.TutorialBuddyStatusActivity:
+    private static final java.lang.String defaultSipAddress
+com.inhuasoft.smart.client.tutorials.TutorialChatRoomActivity:
+    private static final java.lang.String defaultSipAddress
+com.inhuasoft.smart.client.tutorials.TutorialHelloWorldActivity:
+    private static final java.lang.String defaultSipAddress
+com.inhuasoft.smart.client.tutorials.TutorialRegistrationActivity:
+    private static final java.lang.String defaultSipAddress
+    private static final java.lang.String defaultSipPassword
+com.inhuasoft.smart.client.ui.AddressText:
+    67:69:public void setContactAddress(java.lang.String,java.lang.String)
+com.inhuasoft.smart.client.ui.BubbleChat:
+    209:223:public void updateStatusView(org.linphone.core.LinphoneChatMessage$State)
+    314:314:public java.lang.String getTextMessage()
+    318:318:public java.lang.String getImageUrl()
+    322:322:public org.linphone.core.LinphoneChatMessage$State getStatus()
+com.inhuasoft.smart.client.ui.LinphoneSliders:
+    private static final double mCoeff
+com.inhuasoft.smart.client.ui.PreferencesListFragment:
+    private static final int FIRST_REQUEST_CODE
+    private static final int MSG_BIND_PREFERENCES
+    72:74:public PreferencesListFragment()
+    200:200:public android.preference.PreferenceManager getPreferenceManager()
+com.inhuasoft.smart.client.ui.SlidingDrawer:
+    public static final int ORIENTATION_RTL
+    public static final int ORIENTATION_BTT
+    public static final int ORIENTATION_LTR
+    public static final int ORIENTATION_TTB
+    private static final int TAP_THRESHOLD
+    private static final float MAXIMUM_TAP_VELOCITY
+    private static final float MAXIMUM_MINOR_VELOCITY
+    private static final float MAXIMUM_MAJOR_VELOCITY
+    private static final float MAXIMUM_ACCELERATION
+    private static final int VELOCITY_UNITS
+    private static final int MSG_ANIMATE
+    private static final int ANIMATION_FRAME_DURATION
+    private static final int EXPANDED_FULL_OPEN
+    private static final int COLLAPSED_FULL_CLOSED
+    public static final java.lang.String LOG_TAG
+    921:926:public void open()
+    1111:1111:public boolean isMoving()
+de.timroes.axmlrpc.AuthenticationManager:
+    21:23:public void clearAuthData()
+    33:35:public void setAuthData(java.lang.String,java.lang.String)
+de.timroes.axmlrpc.Call:
+    25:26:public Call(java.lang.String)
+de.timroes.axmlrpc.CookieManager:
+    private static final java.lang.String SET_COOKIE
+    private static final java.lang.String COOKIE
+    35:36:public void clearCookies()
+de.timroes.axmlrpc.ResponseParser:
+    private static final java.lang.String FAULT_CODE
+    private static final java.lang.String FAULT_STRING
+de.timroes.axmlrpc.XMLRPCClient:
+    private static final java.lang.String DEFAULT_USER_AGENT
+    static final java.lang.String USER_AGENT
+    static final java.lang.String CONTENT_TYPE
+    static final java.lang.String TYPE_XML
+    static final java.lang.String HOST
+    static final java.lang.String CONTENT_LENGTH
+    static final java.lang.String HTTP_POST
+    static final java.lang.String METHOD_RESPONSE
+    static final java.lang.String PARAMS
+    static final java.lang.String PARAM
+    public static final java.lang.String VALUE
+    static final java.lang.String FAULT
+    static final java.lang.String METHOD_CALL
+    static final java.lang.String METHOD_NAME
+    static final java.lang.String STRUCT_MEMBER
+    public static final int FLAGS_NONE
+    public static final int FLAGS_STRICT
+    public static final int FLAGS_8BYTE_INT
+    public static final int FLAGS_ENABLE_COOKIES
+    public static final int FLAGS_NIL
+    public static final int FLAGS_IGNORE_STATUSCODE
+    public static final int FLAGS_FORWARD
+    public static final int FLAGS_SSL_IGNORE_INVALID_HOST
+    public static final int FLAGS_SSL_IGNORE_INVALID_CERT
+    public static final int FLAGS_DEFAULT_TYPE_STRING
+    public static final int FLAGS_IGNORE_NAMESPACES
+    public static final int FLAGS_SSL_IGNORE_ERRORS
+    public static final int FLAGS_APACHE_WS
+    197:198:public XMLRPCClient(java.net.URL,int)
+    208:209:public XMLRPCClient(java.net.URL,java.lang.String)
+    230:230:public java.net.URL getURL()
+    241:242:public void setUserAgentString(java.lang.String)
+    253:258:public void setCustomHttpHeader(java.lang.String,java.lang.String)
+    268:269:public void setLoginData(java.lang.String,java.lang.String)
+    276:277:public void clearLoginData()
+    285:286:public void clearCookies()
+    303:303:public varargs java.lang.Object call(java.lang.String,java.lang.Object[])
+    335:350:public void cancel(long)
+    693:694:public void setForcedCN(java.lang.String)
+de.timroes.axmlrpc.XMLRPCClient$Caller:
+    414:414:public XMLRPCClient$Caller(de.timroes.axmlrpc.XMLRPCClient)
+    448:451:public void cancel()
+de.timroes.axmlrpc.XMLRPCServerException:
+    35:35:public int getErrorNr()
+de.timroes.axmlrpc.XMLUtil:
+    13:13:public XMLUtil()
+de.timroes.axmlrpc.serializer.ArraySerializer:
+    private static final java.lang.String ARRAY_DATA
+    private static final java.lang.String ARRAY_VALUE
+de.timroes.axmlrpc.serializer.DateTimeSerializer:
+    private static final java.lang.String DATETIME_FORMAT
+de.timroes.axmlrpc.serializer.SerializerHandler:
+    public static final java.lang.String TYPE_STRING
+    public static final java.lang.String TYPE_BOOLEAN
+    public static final java.lang.String TYPE_INT
+    public static final java.lang.String TYPE_INT2
+    public static final java.lang.String TYPE_LONG
+    public static final java.lang.String TYPE_DOUBLE
+    public static final java.lang.String TYPE_DATETIME
+    public static final java.lang.String TYPE_STRUCT
+    public static final java.lang.String TYPE_ARRAY
+    public static final java.lang.String TYPE_BASE64
+    public static final java.lang.String TYPE_NULL
+de.timroes.axmlrpc.serializer.StructSerializer:
+    private static final java.lang.String STRUCT_MEMBER
+    private static final java.lang.String STRUCT_NAME
+    private static final java.lang.String STRUCT_VALUE
+de.timroes.base64.Base64:
+    10:10:public Base64()
+    73:73:public static java.lang.String decodeAsString(java.lang.String)
+    125:125:public static byte[] encodeAsBytes(java.lang.String)
+org.linphone.core.ErrorInfo
+org.linphone.core.ErrorInfoImpl
+org.linphone.core.LinphoneAddress:
+    public abstract java.lang.String getPort()
+    public abstract int getPortInt()
+    public abstract void setUserName(java.lang.String)
+    public abstract void setPort(java.lang.String)
+    public abstract void setPortInt(int)
+    public abstract void clean()
+    public abstract java.lang.String toString()
+org.linphone.core.LinphoneAddressImpl:
+    59:60:private LinphoneAddressImpl(long)
+    97:97:public java.lang.String toUri()
+    109:109:public void clean()
+    112:112:public java.lang.String getPort()
+    115:115:public int getPortInt()
+    121:121:public void setPort(java.lang.String)
+    124:124:public void setPortInt(int)
+org.linphone.core.LinphoneAuthInfo:
+    public abstract java.lang.String getRealm()
+    public abstract void setRealm(java.lang.String)
+    public abstract java.lang.String getHa1()
+    public abstract void setHa1(java.lang.String)
+    public abstract java.lang.String getDomain()
+org.linphone.core.LinphoneAuthInfoImpl:
+    private native void setRealm(long,java.lang.String)
+    71:72:public void setRealm(java.lang.String)
+org.linphone.core.LinphoneCall:
+    public abstract org.linphone.core.CallDirection getDirection()
+    public abstract org.linphone.core.LinphoneCallLog getCallLog()
+    public abstract void enableEchoCancellation(boolean)
+    public abstract boolean isEchoCancellationEnabled()
+    public abstract void enableEchoLimiter(boolean)
+    public abstract boolean isEchoLimiterEnabled()
+    public abstract org.linphone.core.LinphoneCall getReplacedCall()
+    public abstract float getAverageQuality()
+    public abstract float getPlayVolume()
+    public abstract java.lang.String getRemoteUserAgent()
+    public abstract java.lang.String getRemoteContact()
+    public abstract org.linphone.core.LinphoneCall$State getTransferState()
+    public abstract void sendInfoMessage(org.linphone.core.LinphoneInfoMessage)
+    public abstract org.linphone.core.LinphoneCall getTransfererCall()
+    public abstract org.linphone.core.LinphoneCall getTransferTargetCall()
+    public abstract org.linphone.core.Reason getReason()
+    public abstract org.linphone.core.ErrorInfo getErrorInfo()
+org.linphone.core.LinphoneCall$State:
+    37:37:public final int value()
+org.linphone.core.LinphoneCallImpl:
+    boolean ownPtr
+    private native long getCallLog(long)
+    private native boolean isIncoming(long)
+    private native void enableEchoCancellation(long,boolean)
+    private native boolean isEchoCancellationEnabled(long)
+    private native void enableEchoLimiter(long,boolean)
+    private native boolean isEchoLimiterEnabled(long)
+    private native java.lang.Object getReplacedCall(long)
+    private native float getAverageQuality(long)
+    49:51:private LinphoneCallImpl(long)
+    56:60:public org.linphone.core.LinphoneCallLog getCallLog()
+    64:65:public void setAudioStats(org.linphone.core.LinphoneCallStats)
+    67:68:public void setVideoStats(org.linphone.core.LinphoneCallStats)
+    78:78:public org.linphone.core.CallDirection getDirection()
+    123:125:public void enableEchoCancellation(boolean)
+    127:127:public boolean isEchoCancellationEnabled()
+    130:131:public void enableEchoLimiter(boolean)
+    133:133:public boolean isEchoLimiterEnabled()
+    136:136:public org.linphone.core.LinphoneCall getReplacedCall()
+    143:143:public float getAverageQuality()
+    private native float getPlayVolume(long)
+    176:176:public float getPlayVolume()
+    private native java.lang.String getRemoteUserAgent(long)
+    181:181:public java.lang.String getRemoteUserAgent()
+    private native java.lang.String getRemoteContact(long)
+    186:186:public java.lang.String getRemoteContact()
+    private native int getTransferState(long)
+    212:212:public org.linphone.core.LinphoneCall$State getTransferState()
+    private native int sendInfoMessage(long,long)
+    217:218:public void sendInfoMessage(org.linphone.core.LinphoneInfoMessage)
+    private native java.lang.Object getTransfererCall(long)
+    222:222:public org.linphone.core.LinphoneCall getTransfererCall()
+    private native java.lang.Object getTransferTargetCall(long)
+    227:227:public org.linphone.core.LinphoneCall getTransferTargetCall()
+    232:232:public org.linphone.core.Reason getReason()
+    private native long getErrorInfo(long)
+    237:237:public org.linphone.core.ErrorInfo getErrorInfo()
+org.linphone.core.LinphoneCallLog:
+    public abstract int getCallId()
+org.linphone.core.LinphoneCallLog$CallStatus:
+    77:77:public int toInt()
+org.linphone.core.LinphoneCallLogImpl:
+    private native int getCallId(long)
+    66:66:public int getCallId()
+org.linphone.core.LinphoneCallParams:
+    public abstract void setMediaEnctyption(org.linphone.core.LinphoneCore$MediaEncryption)
+    public abstract void addCustomHeader(java.lang.String,java.lang.String)
+    public abstract java.lang.String getCustomHeader(java.lang.String)
+    public abstract void setPrivacy(int)
+    public abstract int getPrivacy()
+    public abstract void setSessionName(java.lang.String)
+    public abstract java.lang.String getSessionName()
+org.linphone.core.LinphoneCallParamsImpl:
+    private native void setMediaEncryption(long,int)
+    64:65:public void setMediaEnctyption(org.linphone.core.LinphoneCore$MediaEncryption)
+    private native void addCustomHeader(long,java.lang.String,java.lang.String)
+    101:102:public void addCustomHeader(java.lang.String,java.lang.String)
+    private native java.lang.String getCustomHeader(long,java.lang.String)
+    107:107:public java.lang.String getCustomHeader(java.lang.String)
+    private native void setPrivacy(long,int)
+    113:114:public void setPrivacy(int)
+    private native int getPrivacy(long)
+    119:119:public int getPrivacy()
+    private native void setSessionName(long,java.lang.String)
+    125:126:public void setSessionName(java.lang.String)
+    private native java.lang.String getSessionName(long)
+    131:131:public java.lang.String getSessionName()
+org.linphone.core.LinphoneCallStats:
+    public abstract org.linphone.core.LinphoneCallStats$MediaType getMediaType()
+    public abstract float getSenderLossRate()
+    public abstract float getReceiverLossRate()
+    public abstract float getSenderInterarrivalJitter()
+    public abstract float getReceiverInterarrivalJitter()
+    public abstract float getRoundTripDelay()
+    public abstract long getLatePacketsCumulativeNumber()
+    public abstract float getJitterBufferSize()
+    public abstract float getLocalLossRate()
+    public abstract float getLocalLateRate()
+org.linphone.core.LinphoneCallStats$MediaType
+org.linphone.core.LinphoneCallStatsImpl:
+    private float senderLossRate
+    private float receiverLossRate
+    private float senderInterarrivalJitter
+    private float receiverInterarrivalJitter
+    private float roundTripDelay
+    private long latePacketsCumulativeNumber
+    private float jitterBufferSize
+    private native int getMediaType(long)
+    private native int getIceState(long)
+    private native float getDownloadBandwidth(long)
+    private native float getUploadBandwidth(long)
+    private native float getSenderLossRate(long)
+    private native float getReceiverLossRate(long)
+    private native float getSenderInterarrivalJitter(long,long)
+    private native float getReceiverInterarrivalJitter(long,long)
+    private native float getRoundTripDelay(long)
+    private native long getLatePacketsCumulativeNumber(long,long)
+    private native float getJitterBufferSize(long)
+    53:67:protected LinphoneCallStatsImpl(long,long)
+    76:76:public org.linphone.core.LinphoneCallStats$MediaType getMediaType()
+    92:92:public float getSenderLossRate()
+    96:96:public float getReceiverLossRate()
+    100:100:public float getSenderInterarrivalJitter()
+    104:104:public float getReceiverInterarrivalJitter()
+    108:108:public float getRoundTripDelay()
+    112:112:public long getLatePacketsCumulativeNumber()
+    116:116:public float getJitterBufferSize()
+    120:120:public float getLocalLossRate()
+    124:124:public float getLocalLateRate()
+org.linphone.core.LinphoneChatMessage:
+    public abstract org.linphone.core.LinphoneAddress getPeerAddress()
+    public abstract org.linphone.core.LinphoneAddress getFrom()
+    public abstract void addCustomHeader(java.lang.String,java.lang.String)
+    public abstract java.lang.String getCustomHeader(java.lang.String)
+    public abstract org.linphone.core.Reason getReason()
+    public abstract org.linphone.core.ErrorInfo getErrorInfo()
+org.linphone.core.LinphoneChatMessage$StateListener:
+    public abstract void onLinphoneChatMessageStateChanged(org.linphone.core.LinphoneChatMessage,org.linphone.core.LinphoneChatMessage$State)
+org.linphone.core.LinphoneChatMessageImpl:
+    private native long getPeerAddress(long)
+    private native long getFrom(long)
+    33:33:public org.linphone.core.LinphoneAddress getPeerAddress()
+    48:48:public org.linphone.core.LinphoneAddress getFrom()
+    private native void addCustomHeader(long,java.lang.String,java.lang.String)
+    54:55:public void addCustomHeader(java.lang.String,java.lang.String)
+    private native java.lang.String getCustomHeader(long,java.lang.String)
+    59:59:public java.lang.String getCustomHeader(java.lang.String)
+    private native int getReason(long)
+    89:89:public org.linphone.core.Reason getReason()
+    private native long getErrorInfo(long)
+    94:94:public org.linphone.core.ErrorInfo getErrorInfo()
+org.linphone.core.LinphoneChatRoom:
+    public abstract void sendMessage(java.lang.String)
+    public abstract void destroy()
+    public abstract org.linphone.core.LinphoneCore getCore()
+org.linphone.core.LinphoneChatRoomImpl:
+    private native void sendMessage(long,java.lang.String)
+    private native void destroy(long)
+    52:55:public synchronized void sendMessage(java.lang.String)
+    92:93:public synchronized void destroy()
+org.linphone.core.LinphoneContent
+org.linphone.core.LinphoneContentImpl
+org.linphone.core.LinphoneCore:
+    public abstract void setContext(java.lang.Object)
+    public abstract void clearProxyConfigs()
+    public abstract org.linphone.core.LinphoneAuthInfo[] getAuthInfosList()
+    public abstract void clearAuthInfos()
+    public abstract org.linphone.core.LinphoneCall invite(org.linphone.core.LinphoneAddress)
+    public abstract void declineCall(org.linphone.core.LinphoneCall,org.linphone.core.Reason)
+    public abstract org.linphone.core.LinphoneAddress getRemoteAddress()
+    public abstract void acceptCallUpdate(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallParams)
+    public abstract void deferCallUpdate(org.linphone.core.LinphoneCall)
+    public abstract float getPlaybackGain()
+    public abstract void setPlayLevel(int)
+    public abstract int getPlayLevel()
+    public abstract boolean isMicMuted()
+    public abstract org.linphone.core.PayloadType findPayloadType(java.lang.String,int,int)
+    public abstract org.linphone.core.PayloadType findPayloadType(java.lang.String,int)
+    public abstract org.linphone.core.PayloadType findPayloadType(java.lang.String)
+    public abstract void setPayloadTypeBitrate(org.linphone.core.PayloadType,int)
+    public abstract int getPayloadTypeBitrate(org.linphone.core.PayloadType)
+    public abstract boolean isEchoLimiterEnabled()
+    public abstract void setSipDscp(int)
+    public abstract int getSipDscp()
+    public abstract org.linphone.core.OnlineStatus getPresenceInfo()
+    public abstract void setRing(java.lang.String)
+    public abstract java.lang.String getRing()
+    public abstract void setRootCA(java.lang.String)
+    public abstract void setDownloadPtime(int)
+    public abstract void setUploadPtime(int)
+    public abstract void setPreferredVideoSize(org.linphone.core.VideoSize)
+    public abstract org.linphone.core.VideoSize getPreferredVideoSize()
+    public abstract boolean isKeepAliveEnabled()
+    public abstract void adjustSoftwareVolume(int)
+    public abstract void setZrtpSecretsCache(java.lang.String)
+    public abstract void enableEchoLimiter(boolean)
+    public abstract void addToConference(org.linphone.core.LinphoneCall)
+    public abstract void startConferenceRecording(java.lang.String)
+    public abstract void stopConferenceRecording()
+    public abstract void transferCallToAnother(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall)
+    public abstract org.linphone.core.LinphoneCall startReferedCall(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallParams)
+    public abstract org.linphone.core.LinphoneCall findCallFromUri(java.lang.String)
+    public abstract boolean isMyself(java.lang.String)
+    public abstract boolean soundResourcesLocked()
+    public abstract void setMediaEncryptionMandatory(boolean)
+    public abstract boolean isMediaEncryptionMandatory()
+    public abstract void setPlayFile(java.lang.String)
+    public abstract void tunnelSetHttpProxy(java.lang.String,int,java.lang.String,java.lang.String)
+    public abstract void setStaticPicture(java.lang.String)
+    public abstract void setUserAgent(java.lang.String,java.lang.String)
+    public abstract void setCpuCount(int)
+    public abstract void setAudioPort(int)
+    public abstract void setAudioPortRange(int,int)
+    public abstract void setAudioDscp(int)
+    public abstract int getAudioDscp()
+    public abstract void setVideoPort(int)
+    public abstract void setVideoPortRange(int,int)
+    public abstract void setVideoDscp(int)
+    public abstract int getVideoDscp()
+    public abstract void setIncomingTimeout(int)
+    public abstract void setInCallTimeout(int)
+    public abstract void setMicrophoneGain(float)
+    public abstract org.linphone.core.LinphoneCore$UpnpState getUpnpState()
+    public abstract java.lang.String getUpnpExternalIpaddress()
+    public abstract org.linphone.core.LinphoneInfoMessage createInfoMessage()
+    public abstract org.linphone.core.LinphoneEvent subscribe(org.linphone.core.LinphoneAddress,java.lang.String,int,org.linphone.core.LinphoneContent)
+    public abstract org.linphone.core.LinphoneEvent createSubscribe(org.linphone.core.LinphoneAddress,java.lang.String,int)
+    public abstract org.linphone.core.LinphoneEvent createPublish(org.linphone.core.LinphoneAddress,java.lang.String,int)
+    public abstract org.linphone.core.LinphoneEvent publish(org.linphone.core.LinphoneAddress,java.lang.String,int,org.linphone.core.LinphoneContent)
+    public abstract void setChatDatabasePath(java.lang.String)
+    public abstract int migrateToMultiTransport()
+    public abstract boolean acceptEarlyMedia(org.linphone.core.LinphoneCall)
+    public abstract boolean acceptEarlyMediaWithParams(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallParams)
+    public abstract void setCallErrorTone(org.linphone.core.Reason,java.lang.String)
+    public abstract void setTone(org.linphone.core.ToneID,java.lang.String)
+    public abstract void setMtu(int)
+    public abstract int getMtu()
+    public abstract void enableSdp200Ack(boolean)
+    public abstract boolean isSdp200AckEnabled()
+    public abstract void disableChat(org.linphone.core.Reason)
+    public abstract void enableChat()
+    public abstract boolean chatEnabled()
+    public abstract void stopRinging()
+org.linphone.core.LinphoneCore$EcCalibratorStatus
+org.linphone.core.LinphoneCore$GlobalState
+org.linphone.core.LinphoneCore$RemoteProvisioningState
+org.linphone.core.LinphoneCore$Transports:
+    243:247:public LinphoneCore$Transports(org.linphone.core.LinphoneCore$Transports)
+org.linphone.core.LinphoneCore$UpnpState
+org.linphone.core.LinphoneCoreException:
+    33:34:public LinphoneCoreException(java.lang.Throwable)
+org.linphone.core.LinphoneCoreFactory:
+    37:38:public static void setFactoryClassName(java.lang.String)
+    public abstract void setLogHandler(org.linphone.core.LinphoneLogHandler)
+    public abstract org.linphone.core.LinphoneFriend createLinphoneFriend()
+    public abstract org.linphone.core.LinphoneContent createLinphoneContent(java.lang.String,java.lang.String,java.lang.String)
+    public abstract org.linphone.core.LinphoneContent createLinphoneContent(java.lang.String,java.lang.String,byte[],java.lang.String)
+    public abstract org.linphone.core.PresenceActivity createPresenceActivity(org.linphone.core.PresenceActivityType,java.lang.String)
+    public abstract org.linphone.core.PresenceService createPresenceService(java.lang.String,org.linphone.core.PresenceBasicStatus,java.lang.String)
+    public abstract org.linphone.core.PresenceModel createPresenceModel()
+    public abstract org.linphone.core.PresenceModel createPresenceModel(org.linphone.core.PresenceActivityType,java.lang.String,java.lang.String,java.lang.String)
+org.linphone.core.LinphoneCoreFactoryImpl:
+    29:29:public LinphoneCoreFactoryImpl()
+    private native void _setLogHandler(java.lang.Object)
+    124:125:public void setLogHandler(org.linphone.core.LinphoneLogHandler)
+    134:134:public org.linphone.core.LinphoneFriend createLinphoneFriend()
+    139:139:public static boolean isArmv7()
+    151:151:public org.linphone.core.LinphoneContent createLinphoneContent(java.lang.String,java.lang.String,byte[],java.lang.String)
+    157:157:public org.linphone.core.LinphoneContent createLinphoneContent(java.lang.String,java.lang.String,java.lang.String)
+    162:162:public org.linphone.core.PresenceActivity createPresenceActivity(org.linphone.core.PresenceActivityType,java.lang.String)
+    167:167:public org.linphone.core.PresenceService createPresenceService(java.lang.String,org.linphone.core.PresenceBasicStatus,java.lang.String)
+    172:172:public org.linphone.core.PresenceModel createPresenceModel()
+    182:182:public org.linphone.core.PresenceModel createPresenceModel(org.linphone.core.PresenceActivityType,java.lang.String,java.lang.String,java.lang.String)
+org.linphone.core.LinphoneCoreImpl:
+    private native void clearAuthInfos(long)
+    private native void clearProxyConfigs(long)
+    private native long getRemoteAddress(long)
+    private native float getPlaybackGain(long)
+    private native java.lang.Object inviteAddress(long,long)
+    private native boolean isMicMuted(long)
+    private native long findPayloadType(long,java.lang.String,int,int)
+    private native int getPresenceInfo(long)
+    private native void setPreferredVideoSize(long,int,int)
+    private native int[] getPreferredVideoSize(long)
+    private native void setRing(long,java.lang.String)
+    private native java.lang.String getRing(long)
+    private native void setRootCA(long,java.lang.String)
+    private native long[] getAuthInfosList(long)
+    private native boolean isKeepAliveEnabled(long)
+    private native void setUploadPtime(long,int)
+    private native void setDownloadPtime(long,int)
+    private native void setZrtpSecretsCache(long,java.lang.String)
+    private native void enableEchoLimiter(long,boolean)
+    private native boolean isMediaEncryptionMandatory(long)
+    private native void setMediaEncryptionMandatory(long,boolean)
+    private native void setAudioPort(long,int)
+    private native void setVideoPort(long,int)
+    private native void setAudioPortRange(long,int,int)
+    private native void setVideoPortRange(long,int,int)
+    private native void setIncomingTimeout(long,int)
+    private native void setInCallTimeout(long,int)
+    private native void setChatDatabasePath(long,java.lang.String)
+    private native int migrateToMultiTransport(long)
+    private native void setCallErrorTone(long,int,java.lang.String)
+    private native void enableSdp200Ack(long,boolean)
+    private native boolean isSdp200AckEnabled(long)
+    private native void stopRinging(long)
+    177:179:public void setContext(java.lang.Object)
+    229:231:public synchronized void clearAuthInfos()
+    233:235:public synchronized void clearProxyConfigs()
+    241:246:public synchronized org.linphone.core.LinphoneAddress getRemoteAddress()
+    288:288:public synchronized float getPlaybackGain()
+    303:307:public synchronized org.linphone.core.LinphoneCall invite(org.linphone.core.LinphoneAddress)
+    318:318:public synchronized boolean isMicMuted()
+    321:326:public synchronized org.linphone.core.PayloadType findPayloadType(java.lang.String,int,int)
+    358:358:public int getPlayLevel()
+    363:363:public void setPlayLevel(int)
+    415:415:public synchronized org.linphone.core.OnlineStatus getPresenceInfo()
+    489:490:public synchronized void setPreferredVideoSize(org.linphone.core.VideoSize)
+    497:502:public synchronized org.linphone.core.VideoSize getPreferredVideoSize()
+    505:506:public synchronized void setRing(java.lang.String)
+    508:508:public synchronized java.lang.String getRing()
+    512:513:public synchronized void setRootCA(java.lang.String)
+    561:561:public synchronized boolean isKeepAliveEnabled()
+    588:588:public synchronized void adjustSoftwareVolume(int)
+    600:602:public synchronized void setDownloadPtime(int)
+    604:605:public synchronized void setUploadPtime(int)
+    608:609:public synchronized void setZrtpSecretsCache(java.lang.String)
+    611:612:public synchronized void enableEchoLimiter(boolean)
+    private native void addToConference(long,long)
+    671:673:public synchronized void addToConference(org.linphone.core.LinphoneCall)
+    private native int transferCallToAnother(long,long,long)
+    694:695:public synchronized void transferCallToAnother(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall)
+    private native java.lang.Object findCallFromUri(long,java.lang.String)
+    700:700:public synchronized org.linphone.core.LinphoneCall findCallFromUri(java.lang.String)
+    707:707:public synchronized boolean isMediaEncryptionMandatory()
+    713:714:public synchronized void setMediaEncryptionMandatory(boolean)
+    722:724:public boolean isMyself(java.lang.String)
+    private native boolean soundResourcesLocked(long)
+    729:729:public synchronized boolean soundResourcesLocked()
+    private native boolean isEchoLimiterEnabled(long)
+    740:740:public synchronized boolean isEchoLimiterEnabled()
+    private native void setPlayFile(long,java.lang.String)
+    752:753:public synchronized void setPlayFile(java.lang.String)
+    private native void acceptCallUpdate(long,long,long)
+    795:796:public synchronized void acceptCallUpdate(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallParams)
+    private native void deferCallUpdate(long,long)
+    802:803:public synchronized void deferCallUpdate(org.linphone.core.LinphoneCall)
+    private native void setStaticPicture(long,java.lang.String)
+    821:822:public synchronized void setStaticPicture(java.lang.String)
+    private native void setUserAgent(long,java.lang.String,java.lang.String)
+    826:827:public synchronized void setUserAgent(java.lang.String,java.lang.String)
+    private native void setCpuCountNative(int)
+    832:833:public synchronized void setCpuCount(int)
+    private native void tunnelSetHttpProxy(long,java.lang.String,int,java.lang.String,java.lang.String)
+    852:853:public synchronized void tunnelSetHttpProxy(java.lang.String,int,java.lang.String,java.lang.String)
+    874:874:public synchronized org.linphone.core.PayloadType findPayloadType(java.lang.String,int)
+    894:895:public synchronized void setAudioPort(int)
+    898:899:public synchronized void setVideoPort(int)
+    902:903:public synchronized void setAudioPortRange(int,int)
+    906:907:public synchronized void setVideoPortRange(int,int)
+    910:911:public synchronized void setIncomingTimeout(int)
+    915:916:public synchronized void setInCallTimeout(int)
+    private native void declineCall(long,long,int)
+    968:969:public synchronized void declineCall(org.linphone.core.LinphoneCall,org.linphone.core.Reason)
+    private native int getUpnpState(long)
+    978:978:public synchronized org.linphone.core.LinphoneCore$UpnpState getUpnpState()
+    private native java.lang.String getUpnpExternalIpaddress(long)
+    983:983:public synchronized java.lang.String getUpnpExternalIpaddress()
+    private native int startConferenceRecording(long,java.lang.String)
+    988:989:public synchronized void startConferenceRecording(java.lang.String)
+    private native int stopConferenceRecording(long)
+    994:995:public synchronized void stopConferenceRecording()
+    998:998:public synchronized org.linphone.core.PayloadType findPayloadType(java.lang.String)
+    private native void setSipDscp(long,int)
+    1004:1005:public synchronized void setSipDscp(int)
+    private native int getSipDscp(long)
+    1010:1010:public synchronized int getSipDscp()
+    private native void setAudioDscp(long,int)
+    1015:1016:public synchronized void setAudioDscp(int)
+    private native int getAudioDscp(long)
+    1021:1021:public synchronized int getAudioDscp()
+    private native void setVideoDscp(long,int)
+    1027:1028:public synchronized void setVideoDscp(int)
+    private native int getVideoDscp(long)
+    1033:1033:public synchronized int getVideoDscp()
+    private native long createInfoMessage(long)
+    1039:1039:public synchronized org.linphone.core.LinphoneInfoMessage createInfoMessage()
+    private native java.lang.Object subscribe(long,long,java.lang.String,int,java.lang.String,java.lang.String,byte[],java.lang.String)
+    1046:1046:public synchronized org.linphone.core.LinphoneEvent subscribe(org.linphone.core.LinphoneAddress,java.lang.String,int,org.linphone.core.LinphoneContent)
+    private native java.lang.Object publish(long,long,java.lang.String,int,java.lang.String,java.lang.String,byte[],java.lang.String)
+    1054:1054:public synchronized org.linphone.core.LinphoneEvent publish(org.linphone.core.LinphoneAddress,java.lang.String,int,org.linphone.core.LinphoneContent)
+    private native java.lang.Object createSubscribe(long,long,java.lang.String,int)
+    1063:1063:public synchronized org.linphone.core.LinphoneEvent createSubscribe(org.linphone.core.LinphoneAddress,java.lang.String,int)
+    private native java.lang.Object createPublish(long,long,java.lang.String,int)
+    1069:1069:public synchronized org.linphone.core.LinphoneEvent createPublish(org.linphone.core.LinphoneAddress,java.lang.String,int)
+    1073:1074:public synchronized void setChatDatabasePath(java.lang.String)
+    1089:1098:public synchronized org.linphone.core.LinphoneAuthInfo[] getAuthInfosList()
+    private native org.linphone.core.LinphoneCall startReferedCall(long,long,long)
+    1112:1113:public synchronized org.linphone.core.LinphoneCall startReferedCall(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallParams)
+    1124:1124:public synchronized int migrateToMultiTransport()
+    private native boolean acceptEarlyMedia(long,long)
+    1130:1130:public synchronized boolean acceptEarlyMedia(org.linphone.core.LinphoneCall)
+    private native boolean acceptEarlyMediaWithParams(long,long,long)
+    1137:1138:public synchronized boolean acceptEarlyMediaWithParams(org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallParams)
+    1146:1147:public synchronized void setCallErrorTone(org.linphone.core.Reason,java.lang.String)
+    private native void setMtu(long,int)
+    1151:1152:public synchronized void setMtu(int)
+    private native int getMtu(long)
+    1156:1156:public synchronized int getMtu()
+    1160:1161:public synchronized void enableSdp200Ack(boolean)
+    1164:1164:public synchronized boolean isSdp200AckEnabled()
+    private native void setTone(long,int,java.lang.String)
+    1169:1170:public synchronized void setTone(org.linphone.core.ToneID,java.lang.String)
+    private native void disableChat(long,int)
+    1174:1175:public synchronized void disableChat(org.linphone.core.Reason)
+    private native void enableChat(long)
+    1179:1180:public synchronized void enableChat()
+    private native boolean chatEnabled(long)
+    1184:1184:public synchronized boolean chatEnabled()
+    1189:1190:public synchronized void stopRinging()
+    private native void setPayloadTypeBitrate(long,long,int)
+    1194:1195:public synchronized void setPayloadTypeBitrate(org.linphone.core.PayloadType,int)
+    private native int getPayloadTypeBitrate(long,long)
+    1199:1199:public synchronized int getPayloadTypeBitrate(org.linphone.core.PayloadType)
+org.linphone.core.LinphoneCoreListener:
+    public abstract void authInfoRequested(org.linphone.core.LinphoneCore,java.lang.String,java.lang.String,java.lang.String)
+    public abstract void globalState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    public abstract void callState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    public abstract void callStatsUpdated(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallStats)
+    public abstract void callEncryptionChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    public abstract void registrationState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneProxyConfig,org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    public abstract void newSubscriptionRequest(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend,java.lang.String)
+    public abstract void notifyPresenceReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend)
+    public abstract void textReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneAddress,java.lang.String)
+    public abstract void messageReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneChatMessage)
+    public abstract void isComposingReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom)
+    public abstract void dtmfReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,int)
+    public abstract void ecCalibrationStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$EcCalibratorStatus,int,java.lang.Object)
+    public abstract void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneAddress,byte[])
+    public abstract void transferState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State)
+    public abstract void infoReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneInfoMessage)
+    public abstract void subscriptionStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.SubscriptionState)
+    public abstract void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,java.lang.String,org.linphone.core.LinphoneContent)
+    public abstract void publishStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.PublishState)
+    public abstract void configuringStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$RemoteProvisioningState,java.lang.String)
+    public abstract void show(org.linphone.core.LinphoneCore)
+    public abstract void displayStatus(org.linphone.core.LinphoneCore,java.lang.String)
+    public abstract void displayMessage(org.linphone.core.LinphoneCore,java.lang.String)
+    public abstract void displayWarning(org.linphone.core.LinphoneCore,java.lang.String)
+org.linphone.core.LinphoneEvent
+org.linphone.core.LinphoneEventImpl
+org.linphone.core.LinphoneFriend:
+    public abstract void setAddress(org.linphone.core.LinphoneAddress)
+    public abstract org.linphone.core.LinphoneFriend$SubscribePolicy getIncSubscribePolicy()
+    public abstract boolean isSubscribesEnabled()
+    public abstract org.linphone.core.OnlineStatus getStatus()
+    public abstract java.lang.String toString()
+org.linphone.core.LinphoneFriend$SubscribePolicy:
+    65:69:public static org.linphone.core.LinphoneFriend$SubscribePolicy fromInt(int)
+org.linphone.core.LinphoneFriendImpl:
+    private native void setAddress(long,long)
+    private native int getIncSubscribePolicy(long)
+    private native boolean isSubscribesEnabled(long)
+    private native int getStatus(long)
+    private native void setPresenceModel(long,long)
+    55:56:public void setAddress(org.linphone.core.LinphoneAddress)
+    66:66:public org.linphone.core.LinphoneFriend$SubscribePolicy getIncSubscribePolicy()
+    74:74:public boolean isSubscribesEnabled()
+    77:77:public org.linphone.core.OnlineStatus getStatus()
+org.linphone.core.LinphoneInfoMessage
+org.linphone.core.LinphoneInfoMessageImpl
+org.linphone.core.LinphoneLogHandler
+org.linphone.core.LinphoneProxyConfig:
+    public abstract java.lang.String normalizePhoneNumber(java.lang.String)
+    public abstract boolean publishEnabled()
+    public abstract void setPrivacy(int)
+    public abstract int getPrivacy()
+    public abstract void setContactParameters(java.lang.String)
+    public abstract java.lang.String getContactParameters()
+    public abstract java.lang.String getContactUriParameters()
+    public abstract int lookupCCCFromIso(java.lang.String)
+    public abstract int lookupCCCFromE164(java.lang.String)
+    public abstract org.linphone.core.Reason getError()
+    public abstract org.linphone.core.ErrorInfo getErrorInfo()
+org.linphone.core.LinphoneProxyConfigImpl:
+    private native java.lang.String normalizePhoneNumber(long,java.lang.String)
+    private native boolean publishEnabled(long)
+    private native void setContactParameters(long,java.lang.String)
+    private native int lookupCCCFromIso(long,java.lang.String)
+    private native int lookupCCCFromE164(long,java.lang.String)
+    119:119:public java.lang.String normalizePhoneNumber(java.lang.String)
+    170:170:public boolean publishEnabled()
+    174:175:public void setContactParameters(java.lang.String)
+    178:178:public int lookupCCCFromIso(java.lang.String)
+    182:182:public int lookupCCCFromE164(java.lang.String)
+    private native int getError(long)
+    187:187:public org.linphone.core.Reason getError()
+    private native void setPrivacy(long,int)
+    192:193:public void setPrivacy(int)
+    private native int getPrivacy(long)
+    198:198:public int getPrivacy()
+    private native java.lang.String getContactParameters(long)
+    228:228:public java.lang.String getContactParameters()
+    private native java.lang.String getContactUriParameters(long)
+    240:240:public java.lang.String getContactUriParameters()
+    private native long getErrorInfo(long)
+    245:245:public org.linphone.core.ErrorInfo getErrorInfo()
+org.linphone.core.LpConfig:
+    public abstract void setFloat(java.lang.String,java.lang.String,float)
+    public abstract void setIntRange(java.lang.String,java.lang.String,int,int)
+    public abstract float getFloat(java.lang.String,java.lang.String,float)
+    public abstract int[] getIntRange(java.lang.String,java.lang.String,int,int)
+    public abstract void sync()
+org.linphone.core.LpConfigImpl:
+    private native void sync(long)
+    49:50:public void sync()
+    private native void setFloat(long,java.lang.String,java.lang.String,float)
+    61:62:public void setFloat(java.lang.String,java.lang.String,float)
+    private native void setIntRange(long,java.lang.String,java.lang.String,int,int)
+    79:80:public void setIntRange(java.lang.String,java.lang.String,int,int)
+    private native float getFloat(long,java.lang.String,java.lang.String,float)
+    91:91:public float getFloat(java.lang.String,java.lang.String,float)
+    private native int[] getIntRange(long,java.lang.String,java.lang.String,int,int)
+    109:109:public int[] getIntRange(java.lang.String,java.lang.String,int,int)
+org.linphone.core.OnlineStatus:
+    87:91:public static org.linphone.core.OnlineStatus fromInt(int)
+org.linphone.core.PayloadType:
+    public abstract void setRecvFmtp(java.lang.String)
+    public abstract java.lang.String getRecvFmtp()
+    public abstract void setSendFmtp(java.lang.String)
+    public abstract java.lang.String getSendFmtp()
+org.linphone.core.PayloadTypeImpl:
+    private native void setRecvFmtp(long,java.lang.String)
+    49:50:public void setRecvFmtp(java.lang.String)
+    private native java.lang.String getRecvFmtp(long)
+    54:54:public java.lang.String getRecvFmtp()
+    private native void setSendFmtp(long,java.lang.String)
+    60:61:public void setSendFmtp(java.lang.String)
+    private native java.lang.String getSendFmtp(long)
+    65:65:public java.lang.String getSendFmtp()
+org.linphone.core.PresenceActivity:
+    public abstract java.lang.String toString()
+    public abstract java.lang.String getDescription()
+    public abstract int setDescription(java.lang.String)
+    public abstract long getNativePtr()
+org.linphone.core.PresenceActivityImpl
+org.linphone.core.PresenceActivityType:
+    104:134:protected static org.linphone.core.PresenceActivityType fromInt(int)
+org.linphone.core.PresenceBasicStatus
+org.linphone.core.PresenceModel:
+    public abstract org.linphone.core.PresenceBasicStatus getBasicStatus()
+    public abstract int setBasicStatus(org.linphone.core.PresenceBasicStatus)
+    public abstract long getTimestamp()
+    public abstract java.lang.String getContact()
+    public abstract void setContact(java.lang.String)
+    public abstract int setActivity(org.linphone.core.PresenceActivityType,java.lang.String)
+    public abstract long getNbActivities()
+    public abstract org.linphone.core.PresenceActivity getNthActivity(long)
+    public abstract int addActivity(org.linphone.core.PresenceActivity)
+    public abstract int clearActivities()
+    public abstract org.linphone.core.PresenceNote getNote(java.lang.String)
+    public abstract int addNote(java.lang.String,java.lang.String)
+    public abstract int clearNotes()
+    public abstract long getNbServices()
+    public abstract org.linphone.core.PresenceService getNthService(long)
+    public abstract int addService(org.linphone.core.PresenceService)
+    public abstract int clearServices()
+    public abstract long getNbPersons()
+    public abstract org.linphone.core.PresencePerson getNthPerson(long)
+    public abstract int addPerson(org.linphone.core.PresencePerson)
+    public abstract int clearPersons()
+org.linphone.core.PresenceModelImpl:
+    25:27:protected PresenceModelImpl(long)
+    private native long newPresenceModelImpl(int,java.lang.String,java.lang.String,java.lang.String)
+    40:42:protected PresenceModelImpl(org.linphone.core.PresenceActivityType,java.lang.String,java.lang.String,java.lang.String)
+    private native int getBasicStatus(long)
+    52:52:public org.linphone.core.PresenceBasicStatus getBasicStatus()
+    private native int setBasicStatus(long,int)
+    58:58:public int setBasicStatus(org.linphone.core.PresenceBasicStatus)
+    private native long getTimestamp(long)
+    64:64:public long getTimestamp()
+    private native java.lang.String getContact(long)
+    70:70:public java.lang.String getContact()
+    private native void setContact(long,java.lang.String)
+    76:77:public void setContact(java.lang.String)
+    private native int setActivity(long,int,java.lang.String)
+    88:88:public int setActivity(org.linphone.core.PresenceActivityType,java.lang.String)
+    private native long getNbActivities(long)
+    94:94:public long getNbActivities()
+    private native java.lang.Object getNthActivity(long,long)
+    100:100:public org.linphone.core.PresenceActivity getNthActivity(long)
+    private native int addActivity(long,long)
+    106:106:public int addActivity(org.linphone.core.PresenceActivity)
+    private native int clearActivities(long)
+    112:112:public int clearActivities()
+    private native java.lang.Object getNote(long,java.lang.String)
+    118:118:public org.linphone.core.PresenceNote getNote(java.lang.String)
+    private native int addNote(long,java.lang.String,java.lang.String)
+    124:124:public int addNote(java.lang.String,java.lang.String)
+    private native int clearNotes(long)
+    130:130:public int clearNotes()
+    private native long getNbServices(long)
+    136:136:public long getNbServices()
+    private native java.lang.Object getNthService(long,long)
+    142:142:public org.linphone.core.PresenceService getNthService(long)
+    private native int addService(long,long)
+    148:148:public int addService(org.linphone.core.PresenceService)
+    private native int clearServices(long)
+    154:154:public int clearServices()
+    private native long getNbPersons(long)
+    160:160:public long getNbPersons()
+    private native java.lang.Object getNthPerson(long,long)
+    166:166:public org.linphone.core.PresencePerson getNthPerson(long)
+    private native int addPerson(long,long)
+    172:172:public int addPerson(org.linphone.core.PresencePerson)
+    private native int clearPersons(long)
+    178:178:public int clearPersons()
+org.linphone.core.PresenceNote
+org.linphone.core.PresenceNoteImpl
+org.linphone.core.PresencePerson
+org.linphone.core.PresencePersonImpl
+org.linphone.core.PresenceService
+org.linphone.core.PresenceServiceImpl
+org.linphone.core.Privacy
+org.linphone.core.PublishState
+org.linphone.core.Reason
+org.linphone.core.SubscriptionDir
+org.linphone.core.SubscriptionState
+org.linphone.core.ToneID
+org.linphone.core.VideoSize:
+    public static final int QCIF
+    public static final int CIF
+    public static final int HVGA
+    public static final int QVGA
+    34:37:public VideoSize(int,int)
+    40:50:public static final org.linphone.core.VideoSize createStandard(int,boolean)
+    55:55:public boolean isValid()
+    88:88:public boolean isPortrait()
+    91:91:public org.linphone.core.VideoSize createInverted()
+org.linphone.core.tutorials.TutorialBuddyStatus:
+    78:88:public void newSubscriptionRequest(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend,java.lang.String)
+    91:92:public void notifyPresenceReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend)
+    96:97:public void registrationState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneProxyConfig,org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    98:98:public void show(org.linphone.core.LinphoneCore)
+    99:99:public void byeReceived(org.linphone.core.LinphoneCore,java.lang.String)
+    100:100:public void displayStatus(org.linphone.core.LinphoneCore,java.lang.String)
+    101:101:public void displayMessage(org.linphone.core.LinphoneCore,java.lang.String)
+    102:102:public void displayWarning(org.linphone.core.LinphoneCore,java.lang.String)
+    103:103:public void globalState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    104:104:public void textReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneAddress,java.lang.String)
+    105:105:public void callState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    106:106:public void callStatsUpdated(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallStats)
+    107:107:public void ecCalibrationStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$EcCalibratorStatus,int,java.lang.Object)
+    108:108:public void callEncryptionChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    109:109:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneAddress,byte[])
+    110:110:public void dtmfReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,int)
+    115:134:public static void main(java.lang.String[])
+    247:247:public void messageReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneChatMessage)
+    254:254:public void transferState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State)
+    260:260:public void infoReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneInfoMessage)
+    267:267:public void subscriptionStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.SubscriptionState)
+    274:274:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,java.lang.String,org.linphone.core.LinphoneContent)
+    281:281:public void publishStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.PublishState)
+    287:287:public void isComposingReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom)
+    294:294:public void configuringStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$RemoteProvisioningState,java.lang.String)
+    301:301:public void authInfoRequested(org.linphone.core.LinphoneCore,java.lang.String,java.lang.String,java.lang.String)
+org.linphone.core.tutorials.TutorialChatRoom:
+    74:74:public void show(org.linphone.core.LinphoneCore)
+    75:75:public void byeReceived(org.linphone.core.LinphoneCore,java.lang.String)
+    76:76:public void authInfoRequested(org.linphone.core.LinphoneCore,java.lang.String,java.lang.String,java.lang.String)
+    77:77:public void displayStatus(org.linphone.core.LinphoneCore,java.lang.String)
+    78:78:public void displayMessage(org.linphone.core.LinphoneCore,java.lang.String)
+    79:79:public void displayWarning(org.linphone.core.LinphoneCore,java.lang.String)
+    80:80:public void globalState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    81:81:public void registrationState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneProxyConfig,org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    82:82:public void newSubscriptionRequest(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend,java.lang.String)
+    83:83:public void notifyPresenceReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend)
+    84:84:public void callState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    85:85:public void callStatsUpdated(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallStats)
+    86:86:public void ecCalibrationStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$EcCalibratorStatus,int,java.lang.Object)
+    87:87:public void callEncryptionChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    88:88:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneAddress,byte[])
+    89:89:public void dtmfReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,int)
+    93:93:public void textReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneAddress,java.lang.String)
+    100:112:public static void main(java.lang.String[])
+    163:164:public void messageReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneChatMessage)
+    169:170:public void onLinphoneChatMessageStateChanged(org.linphone.core.LinphoneChatMessage,org.linphone.core.LinphoneChatMessage$State)
+    177:177:public void transferState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State)
+    183:183:public void infoReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneInfoMessage)
+    190:190:public void subscriptionStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.SubscriptionState)
+    197:197:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,java.lang.String,org.linphone.core.LinphoneContent)
+    204:204:public void publishStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.PublishState)
+    208:212:public void isComposingReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom)
+    219:219:public void configuringStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$RemoteProvisioningState,java.lang.String)
+org.linphone.core.tutorials.TutorialHelloWorld:
+    68:68:public void show(org.linphone.core.LinphoneCore)
+    69:69:public void byeReceived(org.linphone.core.LinphoneCore,java.lang.String)
+    70:70:public void authInfoRequested(org.linphone.core.LinphoneCore,java.lang.String,java.lang.String,java.lang.String)
+    71:71:public void displayStatus(org.linphone.core.LinphoneCore,java.lang.String)
+    72:72:public void displayMessage(org.linphone.core.LinphoneCore,java.lang.String)
+    73:73:public void displayWarning(org.linphone.core.LinphoneCore,java.lang.String)
+    74:74:public void globalState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    75:75:public void registrationState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneProxyConfig,org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    76:76:public void newSubscriptionRequest(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend,java.lang.String)
+    77:77:public void notifyPresenceReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend)
+    78:78:public void textReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneAddress,java.lang.String)
+    79:79:public void callStatsUpdated(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallStats)
+    80:80:public void ecCalibrationStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$EcCalibratorStatus,int,java.lang.Object)
+    81:81:public void callEncryptionChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    82:82:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneAddress,byte[])
+    83:83:public void dtmfReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,int)
+    88:92:public void callState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    97:109:public static void main(java.lang.String[])
+    174:174:public void messageReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneChatMessage)
+    181:181:public void transferState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State)
+    187:187:public void infoReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneInfoMessage)
+    194:194:public void subscriptionStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.SubscriptionState)
+    201:201:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,java.lang.String,org.linphone.core.LinphoneContent)
+    208:208:public void publishStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.PublishState)
+    214:214:public void isComposingReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom)
+    221:221:public void configuringStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$RemoteProvisioningState,java.lang.String)
+org.linphone.core.tutorials.TutorialRegistration:
+    76:77:public void registrationState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneProxyConfig,org.linphone.core.LinphoneCore$RegistrationState,java.lang.String)
+    79:79:public void show(org.linphone.core.LinphoneCore)
+    80:80:public void byeReceived(org.linphone.core.LinphoneCore,java.lang.String)
+    81:81:public void authInfoRequested(org.linphone.core.LinphoneCore,java.lang.String,java.lang.String,java.lang.String)
+    82:82:public void displayStatus(org.linphone.core.LinphoneCore,java.lang.String)
+    83:83:public void displayMessage(org.linphone.core.LinphoneCore,java.lang.String)
+    84:84:public void displayWarning(org.linphone.core.LinphoneCore,java.lang.String)
+    85:85:public void globalState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$GlobalState,java.lang.String)
+    86:86:public void newSubscriptionRequest(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend,java.lang.String)
+    87:87:public void notifyPresenceReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneFriend)
+    88:88:public void textReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneAddress,java.lang.String)
+    89:89:public void callState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State,java.lang.String)
+    90:90:public void callStatsUpdated(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCallStats)
+    91:91:public void ecCalibrationStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$EcCalibratorStatus,int,java.lang.Object)
+    92:92:public void callEncryptionChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,boolean,java.lang.String)
+    93:93:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneAddress,byte[])
+    94:94:public void dtmfReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,int)
+    98:113:public static void main(java.lang.String[])
+    205:205:public void messageReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom,org.linphone.core.LinphoneChatMessage)
+    212:212:public void transferState(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneCall$State)
+    218:218:public void infoReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCall,org.linphone.core.LinphoneInfoMessage)
+    225:225:public void subscriptionStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.SubscriptionState)
+    232:232:public void notifyReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,java.lang.String,org.linphone.core.LinphoneContent)
+    239:239:public void publishStateChanged(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneEvent,org.linphone.core.PublishState)
+    245:245:public void isComposingReceived(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneChatRoom)
+    252:252:public void configuringStatus(org.linphone.core.LinphoneCore,org.linphone.core.LinphoneCore$RemoteProvisioningState,java.lang.String)
+org.linphone.core.video.VideoUtil
+org.linphone.mediastream.Log:
+    private static final boolean useIsLoggable
+    64:67:public static varargs void d(java.lang.Throwable,java.lang.Object[])
+    95:99:public static varargs void f(java.lang.Object[])
+    104:108:public static varargs void f(java.lang.Throwable,java.lang.Object[])
+org.linphone.mediastream.MediastreamerAndroidContext:
+    private static final int DEVICE_CHOICE
+    private static final int DEVICE_HAS_BUILTIN_AEC
+    private static final int DEVICE_HAS_BUILTIN_AEC_CRAPPY
+    private static final int DEVICE_USE_ANDROID_MIC
+    private static final int DEVICE_HAS_BUILTIN_OPENSLES_AEC
+    private native void addSoundDeviceDescription(java.lang.String,java.lang.String,java.lang.String,int,int,int)
+    50:51:public static void addSoundDeviceDesc(java.lang.String,java.lang.String,java.lang.String,int,int,int)
+org.linphone.mediastream.Version:
+    public static final int API03_CUPCAKE_15
+    public static final int API04_DONUT_16
+    public static final int API05_ECLAIR_20
+    public static final int API06_ECLAIR_201
+    public static final int API07_ECLAIR_21
+    public static final int API08_FROYO_22
+    public static final int API09_GINGERBREAD_23
+    public static final int API10_GINGERBREAD_MR1_233
+    public static final int API11_HONEYCOMB_30
+    public static final int API12_HONEYCOMB_MR1_31X
+    public static final int API13_HONEYCOMB_MR2_32
+    public static final int API14_ICE_CREAM_SANDWICH_40
+    public static final int API15_ICE_CREAM_SANDWICH_403
+    public static final int API16_JELLY_BEAN_41
+    public static final int API17_JELLY_BEAN_42
+    public static final int API18_JELLY_BEAN_43
+    public static final int API19_KITKAT_44
+    31:31:public Version()
+    62:62:public static boolean isXLargeScreen(android.content.Context)
+    105:106:public static boolean isHDVideoCapable()
+org.linphone.mediastream.video.AndroidVideoWindowImpl:
+    145:147:public android.view.Surface getSurface()
+    150:152:public android.graphics.Bitmap getBitmap()
+    156:159:public void setOpenGLESDisplay(int)
+    162:163:public void requestRender()
+    167:181:public synchronized void update()
+    235:245:public static int rotationToAngle(int)
+org.linphone.mediastream.video.AndroidVideoWindowImpl$Renderer:
+    199:205:public void setOpenGLESDisplay(int)
+org.linphone.mediastream.video.capture.AndroidVideoApi5JniWrapper
+org.linphone.mediastream.video.capture.AndroidVideoApi5JniWrapper$1
+org.linphone.mediastream.video.capture.AndroidVideoApi8JniWrapper
+org.linphone.mediastream.video.capture.AndroidVideoApi8JniWrapper$1
+org.linphone.mediastream.video.capture.AndroidVideoApi9JniWrapper
+org.linphone.mediastream.video.capture.AndroidVideoApi9JniWrapper$1
+org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration:
+    35:35:public AndroidCameraConfiguration()
+    42:43:public static boolean hasSeveralCameras()
+org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfigurationReader5:
+    34:34:AndroidCameraConfigurationReader5()
+org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfigurationReader9:
+    33:33:AndroidCameraConfigurationReader9()
+org.linphone.mediastream.video.capture.hwconf.Hacks:
+    39:39:private Hacks()
+    88:90:public static final void sleep(int)
+    101:101:public static boolean needPausingCallForSpeakers()
+    121:128:public static boolean hasBuiltInEchoCanceller()
+org.linphone.mediastream.video.display.GL2JNIView:
+    private static final boolean DEBUG
+org.linphone.mediastream.video.display.GL2JNIView$ConfigChooser:
+    190:196:private void printConfigs(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig[])
+    200:281:private void printConfig(javax.microedition.khronos.egl.EGL10,javax.microedition.khronos.egl.EGLDisplay,javax.microedition.khronos.egl.EGLConfig)
+org.linphone.mediastream.video.display.OpenGLESDisplay:
+    21:21:public OpenGLESDisplay()
+org.linphone.tools.Lpc2Xml
+org.linphone.tools.Lpc2Xml$LogLevel
+org.linphone.tools.Xml2Lpc
+org.linphone.tools.Xml2Lpc$LogLevel
