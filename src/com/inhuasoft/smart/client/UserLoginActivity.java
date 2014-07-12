@@ -262,6 +262,7 @@ public class UserLoginActivity extends Activity implements OnClickListener {
 				{
 				     DeviceNo = ParserXml(returncode, "DeviceNo");
 					if (DeviceNo != null  && !"".equals(DeviceNo)) {
+						LinphonePreferences.instance().setDeviceSip("sip:"+DeviceNo+"@115.28.9.71");
 						Message message = mHandler.obtainMessage(User_Login_Success);
 						message.sendToTarget();
 					}

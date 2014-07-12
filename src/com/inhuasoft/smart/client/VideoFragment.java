@@ -29,7 +29,8 @@ public class VideoFragment extends Fragment {
 			public void onClick(View v) {
 				LinphonePreferences.instance().setInitiateVideoCall(true);
 				LinphonePreferences.instance().setAutomaticallyAcceptVideoRequests(true);
-				LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
+				//LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
+				LinphoneManager.getInstance().newOutgoingCall(LinphonePreferences.instance().getDeviceSip(),"myitm1");
 			}
 		});
 		
@@ -40,7 +41,8 @@ public class VideoFragment extends Fragment {
 			public void onClick(View v) {
 				LinphonePreferences.instance().setInitiateVideoCall(false);
 				LinphonePreferences.instance().setAutomaticallyAcceptVideoRequests(false);
-				LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
+				//LinphoneManager.getInstance().newOutgoingCall("myitm1@opensips.org","myitm1");
+				LinphoneManager.getInstance().newOutgoingCall(LinphonePreferences.instance().getDeviceSip(),"myitm1");
 			}
 		});
 	
