@@ -118,7 +118,7 @@ public class LinphonePreferences {
 	}
 	
 	public void setUserSip(String user) {
-		 getConfig().setString("app", "user", user);
+		 getConfig().setString("app", "usersip", user);
 	}
 	
 	public String getUser() {
@@ -126,7 +126,7 @@ public class LinphonePreferences {
 	}
 	
 	public void setUser(String usersip) {
-		 getConfig().setString("app", "usersip", usersip);
+		 getConfig().setString("app", "user", usersip);
 	}
 	
 	public String  getDeviceSip() 	{
@@ -142,7 +142,7 @@ public class LinphonePreferences {
 	}
 	
 	public void setDevice(String device) {
-		getConfig().setString("app", "devicesip", device);
+		getConfig().setString("app", "device", device);
 	}
 	//zwzhu add end 
 	
