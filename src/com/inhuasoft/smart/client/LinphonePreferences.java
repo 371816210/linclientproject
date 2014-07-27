@@ -130,7 +130,8 @@ public class LinphonePreferences {
 	}
 	
 	public String  getDeviceSip() 	{
-		 return getConfig().getString("app", "devicesip", "");
+		// return getConfig().getString("app", "devicesip", "");
+		 return "sip:myitm1@opensips.org";
 	}
 	
 	public void setDeviceSip(String devicesip) {
@@ -349,7 +350,8 @@ public class LinphonePreferences {
 		AccountBuilder builder = new AccountBuilder(LinphoneManager.getLc())
 		.setUsername(username)
 		.setDomain(domain)
-		.setPassword(password).setTransport(TransportType.LinphoneTransportTcp);
+		.setPassword(password);
+//		.setPassword(password).setTransport(TransportType.LinphoneTransportTcp);
 		
 		try {
 			builder.saveNewAccount();
