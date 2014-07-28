@@ -73,7 +73,8 @@ public class UserLoginActivity extends Activity implements OnClickListener {
 		 if(LinphonePreferences.instance().getAccountCount() < 1)
 		 {
 		   //LinphonePreferences.instance().CreatedAccount(editUserName.getEditableText().toString(),editPassword.getEditableText().toString(),"115.28.9.71");
-		     LinphonePreferences.instance().CreatedAccount("myitm","198863","opensips.org");
+		    // LinphonePreferences.instance().CreatedAccount("myitm","198863","opensips.org");
+		     LinphonePreferences.instance().CreatedAccount("myitm","198863","iptel.org");
 			 LinphonePreferences.instance().setInitiateVideoCall(true);
 			 LinphonePreferences.instance().setAutomaticallyAcceptVideoRequests(true);
 		  
