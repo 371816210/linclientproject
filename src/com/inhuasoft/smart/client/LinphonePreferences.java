@@ -131,7 +131,9 @@ public class LinphonePreferences {
 	
 	public String  getDeviceSip() 	{
 		// return getConfig().getString("app", "devicesip", "");
-		 return "sip:myitm1@opensips.org";
+		// return "sip:myitm1@opensips.org";
+		return "sip:zhu371816210@iptel.org";
+		
 	}
 	
 	public void setDeviceSip(String devicesip) {
